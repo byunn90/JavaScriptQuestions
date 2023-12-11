@@ -38,13 +38,21 @@
 // Your output must be case-sensitive (see second example).
 
 function charCount(myChar, str) {
-  for (let i = 0; i < myChar.length; i++) {
-    const element = myChar[i];
-    console.log(element);
+  let z = 0;
+  for (let i = 0; i < str.length; i++) {
+    console.log(str[i]);
+    if (myChar === str[i]) {
+      ++z;
+    }
   }
+  return z;
 }
-charCount("a", "edabit");
-
-charCount("c", "Chamber of secrets");
-
-charCount("b", "big fat bubble");
+console.log(charCount("a", "edabit"));
+// Answer 1 ⬆
+console.log("___");
+console.log(charCount("c", "Chamber of secrets"));
+// Answer 1 ⬆
+console.log("___");
+console.log(charCount("b", "big fat bubble"));
+console.log("___");
+// Answer 4 ⬆
