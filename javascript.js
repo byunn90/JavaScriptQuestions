@@ -13,15 +13,38 @@
 // Don't forget to return the result.
 // If you are stuck, find help in the Resources tab.
 
-function findIndex(arr, str) {
-  // we wanna push the str into the array
-  for (let i = 0; i < arr.length; i++) {
-    console.log([i]);
-    if (arr[i] === str) {
-      return i;
-    }
+// function findIndex(arr, str) {
+//   for (let i = 0; i < arr.length; i++) {
+//     console.log([i]);
+//     if (arr[i] === str) {
+//       return i;
+//     }
+//   }
+//   return "No Match has been found";
+// }
+// console.log(findIndex(["apple", "banana", "Kayhan", "Rahim"], "Rahim"));
+// console.log(findIndex(["apple", "banana", "Kayhan", "Rahim"], "asdasdsad"));
+// Second question
+// Count Instances of a Character in a String
+// Create a function that takes two strings as arguments and returns the number of times the first string (the single character) is found in the second string.
+
+// Examples
+// charCount("a", "edabit") ➞ 1
+
+// charCount("c", "Chamber of secrets") ➞ 1
+
+// charCount("b", "big fat bubble") ➞ 4
+// Notes
+// Your output must be case-sensitive (see second example).
+
+function charCount(myChar, str) {
+  for (let i = 0; i < myChar.length; i++) {
+    const element = myChar[i];
+    console.log(element);
   }
-  return "No Match has been found";
 }
-console.log(findIndex(["apple", "banana", "Kayhan", "Rahim"], "Rahim"));
-console.log(findIndex(["apple", "banana", "Kayhan", "Rahim"], "asdasdsad"));
+charCount("a", "edabit");
+
+charCount("c", "Chamber of secrets");
+
+charCount("b", "big fat bubble");
