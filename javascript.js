@@ -92,12 +92,12 @@
 // Notes
 // Watch out for negative integers (numbers).
 
-function findLargestNums(...array) {
-  const maxNumbers = [];
-  for (let i = 0; i < array.length; i++) {
-    const maxInArray = Math.max(...array[i]);
-    maxNumbers.push(maxInArray);
-  }
-  return maxNumbers;
-}
-console.log(findLargestNums([1, 2, 3, 4, 5, 7], [100, 200, 300], [-1, -44]));
+// function findLargestNums(...array) {
+//   const maxNumbers = [];
+//   for (let i = 0; i < array.length; i++) {
+//     const maxInArray = Math.max(...array[i]);
+//     maxNumbers.push(maxInArray);
+//   }
+//   return maxNumbers;
+// }
+// console.log(findLargestNums([1, 2, 3, 4, 5, 7], [100, 200, 300], [-1, -44]));
