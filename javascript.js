@@ -68,11 +68,36 @@
 // The given array only has integers and strings.
 // Numbers in the array should not repeat.
 // The original order must be maintained.
-function filterArray(arr) {
-  if (arr === "") {
-    return;
-  } else {
-    return arr;
+// function filterArray(arr) {
+//   const result = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] === "number") {
+//       result.push(arr[i]);
+//     }
+//   }
+//   return result;
+// }
+// console.log(filterArray([1, 2, 3, "b", "a"]));
+// console.log(filterArray([1, 5, 3, "adasdsadad", "a"]));
+
+// Find the Largest Numbers in a Group of Arrays
+// Create a function that takes an array of arrays with numbers. Return a new (single) array with the largest numbers of each.
+
+// Examples
+// findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]) ➞ [7, 90, 2]
+
+// findLargestNums([[-34, -54, -74], [-32, -2, -65], [-54, 7, -43]]) ➞ [-34, -2, 7]
+
+// findLargestNums([[0.4321, 0.7634, 0.652], [1.324, 9.32, 2.5423, 6.4314], [9, 3, 6, 3]]) ➞ [0.7634, 9.32, 9]
+// Notes
+// Watch out for negative integers (numbers).
+
+function findLargestNums(...array) {
+  const maxNumbers = [];
+  for (let i = 0; i < array.length; i++) {
+    const maxInArray = Math.max(...array[i]);
+    maxNumbers.push(maxInArray);
   }
+  return maxNumbers;
 }
-console.log(filterArray([1, 2, 3, "b", "a"]));
+console.log(findLargestNums([1, 2, 3, 4, 5, 7], [100, 200, 300], [-1, -44]));
