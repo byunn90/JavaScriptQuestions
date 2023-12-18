@@ -133,6 +133,7 @@
 //   return newArray;
 // }
 // console.log(set([1, 1, 1, 2, 3, 4, 4, 5]));
+// MED QUESTION Q1
 // function arrayOfMultiples(num, length) {
 //   const arra = [];
 //   for (let i = num; arra.length < length; i += num) {
@@ -142,7 +143,7 @@
 //   return arra;
 // }
 // arrayOfMultiples(2, 10);
-
+// MED QUESTION Q2
 // Reverse Words in a String
 // Given an input string, reverse the string word by word, the first word will be the last, and so on.
 
@@ -157,3 +158,57 @@
 // The input string may contain leading or trailing spaces. However, your reversed string should not contain leading or trailing spaces.
 // You need to reduce multiple spaces between two words to a single space in the reversed string.
 // Try to solve this in linear time.
+// function reverseWords(string) {
+//   const newWordsReverse = [];
+//   for (let index = 0; index < string.length; index++) {
+//     const element = string[index];
+//     newWordsReverse.push(element);
+//   }
+//   newWordsReverse.reverse();
+//   const reversedString = newWordsReverse.join(" "); // Join the reversed array with spaces
+//   console.log(reversedString);
+// }
+// reverseWords(["Bird", "PIKACHU", "Parrot"]);
+// MED QUESTION Q3
+// Remove Duplicates from an Array
+// Create a function that takes an array of items, removes all duplicate items and returns a new array in the same sequential order as the old array (minus duplicates).
+
+// Examples
+// removeDups([1, 0, 1, 0]) ➞ [1, 0]
+
+// removeDups(["The", "big", "cat"]) ➞ ["The", "big", "cat"]
+
+// removeDups(["John", "Taylor", "John"]) ➞ ["John", "Taylor"]
+// Notes
+// Tests contain arrays with both strings and numbers.
+// Tests are case sensitive.
+// Each array item is unique.
+// Q
+// Remove the Letters ABC
+// Create a function that will remove the letters "a", "b" and "c" from the given string and return the modified version. If the given string does not contain "a", "b", or "c", return null.
+
+// Examples
+// removeABC("This might be a bit hard") ➞ "This might e  it hrd"
+
+// removeABC("hello world!") ➞ null
+
+// removeABC("") ➞ null
+// Notes
+// If the given string does not contain "a", "b", or "c", return null.
+function removeABC(str) {
+  const modifiedStr = str.replace("a", " ").replace("b", " ").replace("c", " ");
+  for (let index = 0; index < modifiedStr.length; index++) {
+    const element = modifiedStr[index];
+    console.log(element);
+  }
+  if (
+    !modifiedStr.includes("a") &&
+    !modifiedStr.includes("b") &&
+    !modifiedStr.includes("c")
+  ) {
+    return null;
+  } else {
+    return modifiedStr;
+  }
+}
+removeABC("asdzxcvdfqweewqw");
