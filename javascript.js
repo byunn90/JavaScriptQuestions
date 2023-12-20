@@ -245,22 +245,81 @@
 // See another Python version of this series.
 // I'd suggest using getters and setters for this, but you're welcome to use any method you choose!
 // Your OnesThreesNines class here!
-class OneThreeNines {
-  constructor(number) {
-    this.number = number;
+// class OneThreeNines {
+//   constructor(number) {
+//     this.number = number;
+//   }
+//   get ones() {
+//     return Math.floor(this.number / 1);
+//   }
+//   get threes() {
+//     return Math.floor(this.number / 3);
+//   }
+//   get nines() {
+//     return Math.floor(this.number / 9);
+//   }
+// }
+
+// let n1 = new OneThreeNines(5);
+// console.log(n1.ones); // Output: 5
+// console.log(n1.threes); // Output: 1
+// console.log(n1.nines); // Output: 0
+// Name Classes
+// Write a class called Name and create the following attributes given a first name and last name (as fname and lname):
+
+// An attribute called fullname which returns the first and last names.
+// An attribute called initials which returns the first letters of the first and last name. Put a . between the two letters.
+// Remember to allow the attributes fname and lname to be accessed individually as well.
+
+// Examples
+// a1 = new Name("john", "SMITH")
+// a1.fname ➞ "John"
+
+// a1.lname ➞ "Smith"
+
+// a1.fullname ➞ "John Smith"
+
+// a1.initials ➞ "J.S"
+// Notes
+// Make sure only the first letter of each name is capitalised.
+// Check the Resources tab for some helpful tutorials on JavaScript classes.
+class Name {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
   }
-  get ones() {
-    return Math.floor(this.number / 1);
+
+  get fname() {
+    return (
+      this.firstName.charAt(0).toUpperCase() +
+      this.firstName.slice(1).toLowerCase()
+    );
   }
-  get threes() {
-    return Math.floor(this.number / 3);
+
+  get lname() {
+    return (
+      this.lastName.charAt(0).toUpperCase() +
+      this.lastName.slice(1).toLowerCase()
+    );
   }
-  get nines() {
-    return Math.floor(this.number / 9);
+
+  get fullName() {
+    return this.fname + " " + this.lname;
+  }
+
+  get initials() {
+    return (
+      this.firstName.charAt(0).toUpperCase() +
+      "." +
+      this.lastName.charAt(0).toUpperCase()
+    );
   }
 }
 
-let n1 = new OneThreeNines(5);
-console.log(n1.ones); // Output: 5
-console.log(n1.threes); // Output: 1
-console.log(n1.nines); // Output: 0
+// Creating an instance of Name class
+let a1 = new Name("Kayhan", "Mamak");
+
+console.log(a1.fname); // Output: "Kayhan"
+console.log(a1.lname); // Output: "Mamak"
+console.log(a1.fullName); // Output: "Kayhan Mamak"
+console.log(a1.initials); // Output: "K.M"
