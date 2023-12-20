@@ -214,19 +214,53 @@
 // removeABC("asdzxcvdfqweewqw");
 // FizzBuzz
 // Write a program that prints the numbers from 1 to n. For multiples of 3, print "Fizz" instead of the number, and for multiples of 5, print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz". The value of 'n' should be provided by the user or set within the code.
-function fizzBuzz(buzz) {
-  for (let index = 0; index < buzz.length; index++) {
-    const element = buzz[index];
-    if (element % 3 === 0 && element % 5 === 0) {
-      console.log("FizzBuzz");
-    } else if (element % 3 === 0) {
-      console.log("Fizz");
-    } else if (element % 5 === 0) {
-      console.log("Buzz");
-    } else {
-      console.log(element);
-    }
+// function fizzBuzz(buzz) {
+//   for (let index = 0; index < buzz.length; index++) {
+//     const element = buzz[index];
+//     if (element % 3 === 0 && element % 5 === 0) {
+//       console.log("FizzBuzz");
+//     } else if (element % 3 === 0) {
+//       console.log("Fizz");
+//     } else if (element % 5 === 0) {
+//       console.log("Buzz");
+//     } else {
+//       console.log(element);
+//     }
+//   }
+// }
+
+// fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16]);
+// Ones, Threes and Nines (Version #1)
+// Given an int, figure out how many ones, threes and nines you could fit into the number. You must create a class. You will make variables (class.ones, class.threes, class.nines) to do this.
+
+// Examples
+// let n1 = new OnesThreesNines(5)
+// n1.nines ➞ 0
+
+// n1.ones ➞ 5
+
+// n1.threes ➞ 1
+// Notes.
+// This was originally a Python problem over here.
+// See another Python version of this series.
+// I'd suggest using getters and setters for this, but you're welcome to use any method you choose!
+// Your OnesThreesNines class here!
+class OneThreeNines {
+  constructor(number) {
+    this.number = number;
+  }
+  get ones() {
+    return Math.floor(this.number / 1);
+  }
+  get threes() {
+    return Math.floor(this.number / 3);
+  }
+  get nines() {
+    return Math.floor(this.number / 9);
   }
 }
 
-fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16]);
+let n1 = new OneThreeNines(5);
+console.log(n1.ones); // Output: 5
+console.log(n1.threes); // Output: 1
+console.log(n1.nines); // Output: 0
