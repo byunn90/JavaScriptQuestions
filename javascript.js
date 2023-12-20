@@ -195,20 +195,38 @@
 // removeABC("") ➞ null
 // Notes
 // If the given string does not contain "a", "b", or "c", return null.
-function removeABC(str) {
-  const modifiedStr = str.replace("a", " ").replace("b", " ").replace("c", " ");
-  for (let index = 0; index < modifiedStr.length; index++) {
-    const element = modifiedStr[index];
-    console.log(element);
-  }
-  if (
-    !modifiedStr.includes("a") &&
-    !modifiedStr.includes("b") &&
-    !modifiedStr.includes("c")
-  ) {
-    return null;
-  } else {
-    return modifiedStr;
+// function removeABC(str) {
+//   const modifiedStr = str.replace("a", " ").replace("b", " ").replace("c", " ");
+//   for (let index = 0; index < modifiedStr.length; index++) {
+//     const element = modifiedStr[index];
+//     console.log(element);
+//   }
+//   if (
+//     !modifiedStr.includes("a") &&
+//     !modifiedStr.includes("b") &&
+//     !modifiedStr.includes("c")
+//   ) {
+//     return null;
+//   } else {
+//     return modifiedStr;
+//   }
+// }
+// removeABC("asdzxcvdfqweewqw");
+// FizzBuzz
+// Write a program that prints the numbers from 1 to n. For multiples of 3, print "Fizz" instead of the number, and for multiples of 5, print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz". The value of 'n' should be provided by the user or set within the code.
+function fizzBuzz(buzz) {
+  for (let index = 0; index < buzz.length; index++) {
+    const element = buzz[index];
+    if (element % 3 === 0 && element % 5 === 0) {
+      console.log("FizzBuzz");
+    } else if (element % 3 === 0) {
+      console.log("Fizz");
+    } else if (element % 5 === 0) {
+      console.log("Buzz");
+    } else {
+      console.log(element);
+    }
   }
 }
-removeABC("asdzxcvdfqweewqw");
+
+fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16]);
