@@ -432,6 +432,9 @@
 // toArray({}) ➞ []
 // Notes
 // Return an empty array if the object is empty.
+
+function toArray(obj) {}
+
 //////
 // Array question 2
 // Convert Key, Values in an Object to Array
