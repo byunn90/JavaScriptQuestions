@@ -419,3 +419,60 @@
 // Don't worry about preventing a "dead" player from attacking.
 // Pay very close attention to the exact format of the returned "attack" string! I'm comparing that directly with an expected result string, so even something like a missing space could ruin your answer.
 // Your Player instances will be constructed as new Player(name,health,energy,armor)
+// Array question 1
+
+// Converting Objects to Arrays
+// Write a function that converts an object into an array, where each element represents a key-value pair in the form of an array.
+
+// Examples
+// toArray({ a: 1, b: 2 }) ➞ [["a", 1], ["b", 2]]
+
+// toArray({ shrimp: 15, tots: 12 }) ➞ [["shrimp", 15], ["tots", 12]]
+
+// toArray({}) ➞ []
+// Notes
+// Return an empty array if the object is empty.
+//////
+// Array question 2
+// Convert Key, Values in an Object to Array
+// Write a function that converts an object into an array of keys and values.
+
+// Examples
+// objectToArray({
+//   D: 1,
+//   B: 2,
+//   C: 3
+// }) ➞ [["D", 1], ["B", 2], ["C", 3]]
+
+// objectToArray({
+//   likes: 2,
+//   dislikes: 3,
+//   followers: 10
+// }) ➞ [["likes", 2], ["dislikes", 3], ["followers", 10]]
+// Notes
+// N/A
+// Q3
+
+// Fix the Error: Flattening an Array
+// I'm trying to write a function to flatten an array of subarrays into one array. (Suppose I am unware there is a .flat() method in the Array prototype). In other words, I want to transform this: [[1, 2], [3, 4]] into [1, 2, 3, 4].
+
+// Here is my code:
+
+// function flatten(arr) {
+//   arr2 = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     arr2.concat(arr[i]);
+//   }
+//   return arr2;
+// }
+// But...it doesn't seem to be working! Fix my code so that it correctly flattens the array.
+
+// Examples
+// flatten([[1, 2], [3, 4]]) ➞ []
+// // Expected: [1, 2, 3, 4]
+
+// flatten([["a", "b"], ["c", "d"]]) ➞ []
+// // Expected: ["a", "b", "c", "d"]
+
+// flatten([[true, false], [false, false]]) ➞ []
+// // Expected: [true, false, false, false]
