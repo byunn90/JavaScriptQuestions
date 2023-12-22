@@ -433,8 +433,23 @@
 // Notes
 // Return an empty array if the object is empty.
 
-function toArray(obj) {}
+const person = {
+  firstName: "John",
+  lastName: "Mamak",
+};
 
+function toArray(obj) {
+  const propertyName = Object.keys(obj);
+  const entrieName = Object.entries(obj);
+  console.log(entrieName);
+  if (propertyName === "") {
+    return;
+  } else {
+    return propertyName;
+  }
+}
+const result = toArray(person);
+console.log(result);
 //////
 // Array question 2
 // Convert Key, Values in an Object to Array
@@ -479,3 +494,11 @@ function toArray(obj) {}
 
 // flatten([[true, false], [false, false]]) ➞ []
 // // Expected: [true, false, false, false]
+// Fix this incorrect code so that all tests pass!
+// function flatten(arr) {
+//   arr2 = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     arr2.concat(arr[i]);
+//   }
+//   return arr2;
+// }
