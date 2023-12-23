@@ -433,23 +433,23 @@
 // Notes
 // Return an empty array if the object is empty.
 
-const person = {
-  firstName: "John",
-  lastName: "Mamak",
-};
+// const person = {
+//   firstName: "John",
+//   lastName: "Mamak",
+// };
 
-function toArray(obj) {
-  const propertyName = Object.keys(obj);
-  const entrieName = Object.entries(obj);
-  console.log(entrieName);
-  if (propertyName === "") {
-    return;
-  } else {
-    return propertyName;
-  }
-}
-const result = toArray(person);
-console.log(result);
+// function toArray(obj) {
+//   const propertyName = Object.keys(obj);
+//   const entrieName = Object.entries(obj);
+//   console.log(entrieName);
+//   if (propertyName === "") {
+//     return;
+//   } else {
+//     return propertyName;
+//   }
+// }
+// const result = toArray(person);
+// console.log(result);
 //////
 // Array question 2
 // Convert Key, Values in an Object to Array
@@ -469,6 +469,13 @@ console.log(result);
 // }) ➞ [["likes", 2], ["dislikes", 3], ["followers", 10]]
 // Notes
 // N/A
+const object1 = {
+  name: "Kayhan",
+  lastName: "Mamak",
+};
+
+console.log(object1.name);
+
 // Q3
 
 // Fix the Error: Flattening an Array
