@@ -469,13 +469,22 @@
 // }) ➞ [["likes", 2], ["dislikes", 3], ["followers", 10]]
 // Notes
 // N/A
-const object1 = {
-  name: "Kayhan",
-  lastName: "Mamak",
-};
 
-console.log(object1.name);
-
+// console.log(object1.name);
+class Myobject1 {
+  constructor(name, lastName) {
+    this.name = name;
+    this.lastName = lastName;
+  }
+}
+function myArrayInput(object) {
+  for (const [, value] of Object.entries(object)) {
+    console.log(value);
+  }
+}
+const a1 = new Myobject1("Kayhan", "Mamak");
+console.log(a1);
+myArrayInput(a1);
 // Q3
 
 // Fix the Error: Flattening an Array
