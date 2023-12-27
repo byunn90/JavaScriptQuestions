@@ -614,6 +614,72 @@
 // Pay very close attention to the exact format of the returned "attack" string! I'm comparing that directly with an expected result string, so even something like a missing space could ruin your answer.
 // Your Player instances will be constructed as new Player(name,health,energy,armor)
 
-class Player {
-  constructor() {}
-}
+// class Player {
+//   constructor() {}
+// }
+
+// q1
+// Running Athlete 🏃
+// No description.
+// Guess the code from test cases.
+// Examples
+// runningAthlete(["run", "jump", "run", "jump", "run"], "_|_|_") ➞ "_|_|_"
+
+// runningAthlete(["run", "jump", "run", "run", "run"], "_|_|_") ➞ "_|_/_"
+
+// runningAthlete(["jump", "jump", "jump", "jump", "jump"], "_|_|_") ➞ "x|x|x"
+
+// runningAthlete(["run", "run", "run", "run", "run"], "_|_|_") ➞ "_/_/_"
+// Notes
+// N/A
+// function runningAthlete(act, txt) {}
+// Question 2
+// Crowded Carriage Capacity
+// A train has a maximum capacity of n passengers overall, which means each carriage's capacity will share an equal proportion of the maximum capacity.
+
+// Create a function which returns the index of the first carriage which holds 50% or less of its maximum capacity. If no such carriage exists, return -1.
+
+// Worked Example
+// findASeat(200, [35, 23, 18, 10, 40]) ➞ 2
+
+// // There are 5 carriages which each have a maximum capacity of 40 (200 / 5 = 40).
+// // Index 0's carriage is too full (35 is 87.5% of the maximum).
+// // Index 1's carriage is too full (23 is 57.5% of the maximum).
+// // Index 2's carriage is good enough (18 is 45% of the maximum).
+// // Return 2.
+// Examples
+// findASeat(20, [3, 5, 4, 2]) ➞ 3
+
+// findASeat(1000, [50, 20, 80, 90, 100, 60, 30, 50, 80, 60]) ➞ 0
+
+// findASeat(200, [35, 23, 40, 21, 38]) ➞ -1
+// Notes
+// If a train can hold 200 passengers, and has 5 carriages, then that means each carriage can hold a maximum of 40 passengers each.
+// All carriage numbers will be positive integers, which will be able to divide evenly.
+// Remember to return -1 if no carriage is empty enough.
+// function findASeat(n, arr) {}
+// question 3
+// Matrix Subtraction
+// Two matrices must have an equal number of rows and columns to be subtracted. In which case, the subtracted of two matrices A and B will be a matrix which has the same number of rows and columns as A and B.
+
+// The result of the subtraction of A and B, denoted A - B is computed by subtracting corresponding elements of A and B.
+
+// Create a function that takes 2 x 2D array (matrix A, matrixB) as an argument and returns a 2D array (matrix C). C = A-B.
+
+// Examples
+// sub([
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9]
+// ], [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9]
+// ]) ➞ [
+//   [0, 0, 0],
+//   [0, 0, 0],
+//   [0, 0, 0]
+// ]
+// Notes
+// Treat strings of numbers as integers.
+// function sub(A1, A2) {}
