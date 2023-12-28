@@ -655,6 +655,30 @@
 // findASeat(200, [35, 23, 40, 21, 38]) ➞ -1
 // Notes
 // If a train can hold 200 passengers, and has 5 carriages, then that means each carriage can hold a maximum of 40 passengers each.
+// n = number people
+// arr = number of carriages
+// find the maximum number for each carriage
+function findASeat(n, arr) {
+  const fiftyPercentage = (n * 50) / 100;
+
+  console.log(fiftyPercentage);
+  const maximumCar = n / arr.length;
+  console.log(`Maximum capacity per carriage: ${Math.round(maximumCar)}`);
+  for (let index = 0; index < arr.length; index++) {
+    const element = arr[index];
+    const amountP = (element / fiftyPercentage) * 100;
+    console.log(`Carriage ${index}: ${Math.round(amountP)}% full`);
+    if (element <= fiftyPercentage) {
+      console.log(
+        `Carriage ${index} ${Math.round(element)} is 50% or less filled.`
+      );
+      return index;
+    }
+  }
+  return -1;
+}
+findASeat(200, [111, 40, 50, 111, 56]);
+
 // All carriage numbers will be positive integers, which will be able to divide evenly.
 // Remember to return -1 if no carriage is empty enough.
 // function findASeat(n, arr) {}
