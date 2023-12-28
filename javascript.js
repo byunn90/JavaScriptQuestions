@@ -658,26 +658,26 @@
 // n = number people
 // arr = number of carriages
 // find the maximum number for each carriage
-function findASeat(n, arr) {
-  const fiftyPercentage = (n * 50) / 100;
+// function findASeat(n, arr) {
+//   const fiftyPercentage = (n * 50) / 100;
 
-  console.log(fiftyPercentage);
-  const maximumCar = n / arr.length;
-  console.log(`Maximum capacity per carriage: ${Math.round(maximumCar)}`);
-  for (let index = 0; index < arr.length; index++) {
-    const element = arr[index];
-    const amountP = (element / fiftyPercentage) * 100;
-    console.log(`Carriage ${index}: ${Math.round(amountP)}% full`);
-    if (element <= fiftyPercentage) {
-      console.log(
-        `Carriage ${index} ${Math.round(element)} is 50% or less filled.`
-      );
-      return index;
-    }
-  }
-  return -1;
-}
-findASeat(200, [111, 40, 50, 111, 56]);
+//   console.log(fiftyPercentage);
+//   const maximumCar = n / arr.length;
+//   console.log(`Maximum capacity per carriage: ${Math.round(maximumCar)}`);
+//   for (let index = 0; index < arr.length; index++) {
+//     const element = arr[index];
+//     const amountP = (element / fiftyPercentage) * 100;
+//     console.log(`Carriage ${index}: ${Math.round(amountP)}% full`);
+//     if (element <= fiftyPercentage) {
+//       console.log(
+//         `Carriage ${index} ${Math.round(element)} is 50% or less filled.`
+//       );
+//       return index;
+//     }
+//   }
+//   return -1;
+// }
+// findASeat(200, [111, 40, 50, 111, 56]);
 
 // All carriage numbers will be positive integers, which will be able to divide evenly.
 // Remember to return -1 if no carriage is empty enough.
@@ -706,4 +706,42 @@ findASeat(200, [111, 40, 50, 111, 56]);
 // ]
 // Notes
 // Treat strings of numbers as integers.
-// function sub(A1, A2) {}
+function sub(matrixA, matrixB) {
+  // Check if matrices have the same dimensions
+  if (
+    matrixA.length !== matrixB.length ||
+    matrixA[0].length !== matrixB[0].length
+  ) {
+    return "Matrices are not of the same size. Subtraction cannot be performed.";
+  }
+
+  // Create an empty matrix to store the result
+  const resultMatrix = [];
+
+  // Iterate through rows
+  for (let i = 0; i < matrixA.length; i++) {
+    resultMatrix[i] = [];
+    // Iterate through columns
+    for (let j = 0; j < matrixA[0].length; j++) {
+      // Perform subtraction and store the result in the result matrix
+      resultMatrix[i][j] = matrixA[i][j] - matrixB[i][j];
+    }
+  }
+
+  return resultMatrix; // Return the resulting matrix C
+}
+
+// Test the function with example matrices
+const matrix1 = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+const matrix2 = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+console.log(sub(matrix1, matrix2)); // Output the result of matrix subtraction
