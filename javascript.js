@@ -706,42 +706,57 @@
 // ]
 // Notes
 // Treat strings of numbers as integers.
-function sub(matrixA, matrixB) {
-  // Check if matrices have the same dimensions
-  if (
-    matrixA.length !== matrixB.length ||
-    matrixA[0].length !== matrixB[0].length
-  ) {
-    return "Matrices are not of the same size. Subtraction cannot be performed.";
-  }
+// function sub(matrixA, matrixB) {
+//   // Check if matrices have the same dimensions
+//   if (
+//     matrixA.length !== matrixB.length ||
+//     matrixA[0].length !== matrixB[0].length
+//   ) {
+//     return "Matrices are not of the same size. Subtraction cannot be performed.";
+//   }
 
-  // Create an empty matrix to store the result
-  const resultMatrix = [];
+//   // Create an empty matrix to store the result
+//   const resultMatrix = [];
 
-  // Iterate through rows
-  for (let i = 0; i < matrixA.length; i++) {
-    resultMatrix[i] = [];
-    // Iterate through columns
-    for (let j = 0; j < matrixA[0].length; j++) {
-      // Perform subtraction and store the result in the result matrix
-      resultMatrix[i][j] = matrixA[i][j] - matrixB[i][j];
-    }
-  }
+//   // Iterate through rows
+//   for (let i = 0; i < matrixA.length; i++) {
+//     resultMatrix[i] = [];
+//     // Iterate through columns
+//     for (let j = 0; j < matrixA[0].length; j++) {
+//       // Perform subtraction and store the result in the result matrix
+//       resultMatrix[i][j] = matrixA[i][j] - matrixB[i][j];
+//     }
+//   }
 
-  return resultMatrix; // Return the resulting matrix C
-}
+//   return resultMatrix; // Return the resulting matrix C
+// }
 
-// Test the function with example matrices
-const matrix1 = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-];
+// // Test the function with example matrices
+// const matrix1 = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
 
-const matrix2 = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
-];
+// const matrix2 = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
 
-console.log(sub(matrix1, matrix2)); // Output the result of matrix subtraction
+// console.log(sub(matrix1, matrix2)); // Output the result of matrix subtraction
+// sat question
+// Running Athlete 🏃
+// No description.
+// Guess the code from test cases.
+// Examples
+// runningAthlete(["run", "jump", "run", "jump", "run"], "_|_|_") ➞ "_|_|_"
+
+// runningAthlete(["run", "jump", "run", "run", "run"], "_|_|_") ➞ "_|_/_"
+
+// runningAthlete(["jump", "jump", "jump", "jump", "jump"], "_|_|_") ➞ "x|x|x"
+
+// runningAthlete(["run", "run", "run", "run", "run"], "_|_|_") ➞ "_/_/_"
+// Notes
+// N/A
+function runningAthlete(act, txt) {}
