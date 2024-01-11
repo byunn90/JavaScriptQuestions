@@ -776,12 +776,25 @@
 // get odd numbers
 //
 function isSpecialArray(arr) {
-  // get odd numbers
-  //
-  for (let index = 0; index < array.length; index++) {
-    const element = array[index];
+  for (let index = 0; index < arr.length; index++) {
+    const element = arr[index];
+
+    // Check if index is even
+    if (index % 2 === 0) {
+      // Check if the element at even index is not even
+      if (element % 2 !== 0) {
+        return false; // Return false if not special
+      }
+    } else {
+      // Check if the element at odd index is not odd
+      if (element % 2 === 0) {
+        return false; // Return false if not special
+      }
+    }
   }
-  if (element % 2 === 0) {
-  }
+
+  // If the loop completes without returning false, the array is special
+  return true;
 }
-isSpecialArray([1, 2, 3, 4, 5, 6, 7, 8]);
+
+console.log(isSpecialArray([1, 22, 3, 4, 5, 6, 7, 8])); // Out
