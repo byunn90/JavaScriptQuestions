@@ -909,7 +909,45 @@
 // if bmi <= 30.0 return "Overweight"
 
 // if bmi > 30 return "Obese"
+// Answers
+// function bmi(weight, height) {
+//   calculateBmi = weight / height ** 2;
+//   console.log(calculateBmi);
+//   if (calculateBmi <= 18.5) {
+//     return "Underweight";
+//   } else if (calculateBmi <= 25.0) {
+//     return "Normal";
+//   } else if (calculateBmi <= 30.0) {
+//     return "OverWeight";
+//   } else if (calculateBmi > 30) {
+//     return "Obese";
+//   }
+// }
+// console.log(bmi(98, 2));
+// function bmi(weight, height) {
+//   const calculateBmi = weight / height ** 2;
+//   return calculateBmi <= 18.5
+//     ? "Underweight"
+//     : calculateBmi <= 25.0
+//     ? "Normal"
+//     : calculateBmi <= 30.0
+//     ? "Overweight"
+//     : "Obese";
+// }
 
-function bmi(weight, height) {
-  return "";
-}
+// Codewars Question 2
+// DESCRIPTION:
+//  You have a string. The string consists of words. Before words can be an exclamation mark !. Also some words are marked as one set with square brackets []. You task is to split the string into separate words and sets.
+//  The set can't be contained in another set.
+
+// Input:
+//  String with words (separated by spaces), ! and [].
+
+// Output:
+//  Array with separated words and sets.
+
+// Examples:
+
+// ('Buy a !car [!red green !white] [cheap or !new]')  =>  ['Buy', 'a', '!car', '[!red green !white]', '[cheap or !new]']
+// ('!Learning !javascript is [a joy]')                =>  ['!Learning', '!javascript', 'is', '[a joy]']
+// ('[Cats and dogs] are !beautiful and [cute]')       =>  ['[Cats and dogs]', 'are', '!beautiful', 'and', '[cute]']
