@@ -807,3 +807,109 @@
 //   return repeat;
 // }
 // console.log(repeatStr(6, "Hello"));
+
+// In this simple exercise, you will create a program that will take two lists of integers, a and b. Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b. You must find the difference of the cuboids' volumes regardless of which is bigger.
+
+// For example, if the parameters passed are ([2, 2, 3], [5, 4, 1]), the volume of a is 12 and the volume of b is 20. Therefore, the function should return 8.
+
+// Your function will be tested with pre-made examples as well as random ones.
+
+// If you can, try writing it in one line of code.
+
+// function findDifference(a, b) {
+//   const aa = a[0] * a[1] * a[2];
+//   const bb = b[0] * b[1] * b[2];
+//   return Math.abs(aa - bb);
+// }
+
+// console.log(findDifference([2, 2, 3], [5, 4, 1]));
+// 1 We gotta times then all together each array to get the dimensions of cuboids
+
+/// Rock beats scissors
+// Paper beats rock
+// scissors beats paper
+
+// const rps = (p1, p2) => {
+//   if (p1 === p2) {
+//     return "Draw!";
+//   } else if (p1 === "scissors" && p2 === "paper") {
+//     return "Player 1 won!"; // Corrected message
+//   } else if (p1 === "paper" && p2 === "rock") {
+//     return "Player 1 won!"; // Corrected message
+//   } else if (p1 === "rock" && p2 === "scissors") {
+//     return "Player 1 won!"; // Corrected message, ensure consistency in casing and punctuation
+//   } else {
+//     return "Player 2 won!"; // Corrected message for Player 2 win
+//   }
+// };
+
+// Code wars
+
+// Question 1
+
+// Count the number of divisors of a positive integer n.
+
+// Random tests go up to n = 500000.
+
+// Examples (input --> output)
+// 4 --> 3 // we have 3 divisors - 1, 2 and 4
+// 5 --> 2 // we have 2 divisors - 1 and 5
+// 12 --> 6 // we have 6 divisors - 1, 2, 3, 4, 6 and 12
+// 30 --> 8 // we have 8 divisors - 1, 2, 3, 5, 6, 10, 15 and 30
+// Note you should only return a number, the count of divisors. The numbers between parentheses are shown only for you to see which numbers are counted in each case.
+// function getDivisorsCnt(n) {
+//   let counter = 0;
+//   for (let index = 1; index <= n; index++) {
+//     if (n % index === 0) {
+//       counter++;
+//     }
+//   }
+//   return counter;
+// }
+
+// console.log(getDivisorsCnt(3));
+// question 2
+
+// A square of squares
+// You like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks!
+
+// However, sometimes, you can't arrange them into a square. Instead, you end up with an ordinary rectangle! Those blasted things! If you just had a way to know, whether you're currently working in vain… Wait! That's it! You just have to check if your number of building blocks is a perfect square.
+
+// Task
+// Given an integral number, determine if it's a square number:
+
+// In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
+
+// The tests will always use some integral number, so don't worry about that in dynamic typed languages.
+
+// Examples
+// -1  =>  false
+//  0  =>  true
+//  3  =>  false
+//  4  =>  true
+// 25  =>  true
+// 26  =>  false
+
+// let isSquare = function (n) {
+//   if (n < 0) {
+//     return false;
+//   }
+
+//   let m = Math.sqrt(n);
+//   return Number.isInteger(m);
+// };
+// isSquare(16);
+// Question 3 BMI
+// Write function bmi that calculates body mass index (bmi = weight / height2).
+
+// if bmi <= 18.5 return "Underweight"
+
+// if bmi <= 25.0 return "Normal"
+
+// if bmi <= 30.0 return "Overweight"
+
+// if bmi > 30 return "Obese"
+
+function bmi(weight, height) {
+  return "";
+}
