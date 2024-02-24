@@ -976,21 +976,29 @@
 // Performance requirements:
 
 // 2 <= n <= 1e12
-
+// Check for squares for numbers
+// check for prime numbers from sqaures first
 function mobius(n) {
-  //coding and coding..
-  let i = 0;
-  for (let index = 2; index < n.length; index++) {
-    const element = n[index];
+  let count = 0;
 
-    i++;
-    if (n(index * index === 0)) {
-      console.log(`${index} hi`);
+  for (let i = 2; i * i <= n; i++) {
+    if (n % (i * i) === 0) {
+      return 0;
+    }
+    if (n % i === 0) {
+      count++;
+      while (n % i === 0) {
+        n /= i;
+      }
     }
   }
-}
-mobius(10);
+  if (n > 1) count++;
 
-// for (let index = 0; index < array.length; index++) {
-//   const element = array[index];
-// }
+  if (count % 2 === 0) {
+    return 1;
+  } else {
+    return -1;
+  }
+}
+
+console.log(mobius(15));
