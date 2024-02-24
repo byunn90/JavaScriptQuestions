@@ -1002,21 +1002,22 @@
 // }
 
 // console.log(mobius(15));
+// Maximum subarray sum
+// 378390889% of 6,22523,253 of 73,434knotman903 Issues Reported
+//  JavaScript
+// Node v18.x
+// VIM
+// EMACS
+// Instructions
+// Output
+// The maximum sum subarray problem consists in finding the maximum sum of a contiguous subsequence in an array or list of integers:
 
+// maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])
+// // should be 6: [4, -1, 2, 1]
+// Easy case is when the list is made up of only positive numbers and the maximum sum is the sum of the whole array. If the list is made up of only negative numbers, return 0 instead.
 
+// Empty list is considered to have zero greatest sum. Note that the empty list or array is also a valid sublist/subarray.
 
-DESCRIPTION:
-//  You have a string. The string consists of words. Before words can be an exclamation mark !. Also some words are marked as one set with square brackets []. You task is to split the string into separate words and sets.
-//  The set can't be contained in another set.
-
-// Input:
-//  String with words (separated by spaces), ! and [].
-
-// Output:
-//  Array with separated words and sets.
-
-// Examples:
-
-// ('Buy a !car [!red green !white] [cheap or !new]')  =>  ['Buy', 'a', '!car', '[!red green !white]', '[cheap or !new]']
-// ('!Learning !javascript is [a joy]')                =>  ['!Learning', '!javascript', 'is', '[a joy]']
-// ('[Cats and dogs] are !beautiful and [cute]')       =>  ['[Cats and dogs]', 'are', '!beautiful', 'and', '[cute]']
+var maxSequence = function (arr) {
+  // ...
+};
