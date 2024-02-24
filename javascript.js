@@ -951,3 +951,46 @@
 // ('Buy a !car [!red green !white] [cheap or !new]')  =>  ['Buy', 'a', '!car', '[!red green !white]', '[cheap or !new]']
 // ('!Learning !javascript is [a joy]')                =>  ['!Learning', '!javascript', 'is', '[a joy]']
 // ('[Cats and dogs] are !beautiful and [cute]')       =>  ['[Cats and dogs]', 'are', '!beautiful', 'and', '[cute]']
+// function cleverSplit(s) {}
+// Code wars
+
+// Task
+// Compute the Mobius function
+// �
+// (
+// �
+// )
+// μ(n) for a given value of n.
+
+// For a given n, the Mobius function is equal to:
+
+// 0 if n is divisible by the square of any prime number. For example n = 4, 8, 9 are all divisible by the square of at least one prime number.
+
+// 1 if n is not divisible by the square of any prime numbers, and has an even number of prime factors. For example n = 6, 10, 21 satisfy these conditions (e.g. 21 = 3 * 7 so it has an even number (2) of distinct prime factors and is not divisible by the square of any prime numbers).
+
+// -1 otherwise. For example n = 3, 5, 7, 30.
+
+// Input/Output
+// You will be given an integer n; you must return an integer - the Mobius function of n.
+
+// Performance requirements:
+
+// 2 <= n <= 1e12
+
+function mobius(n) {
+  //coding and coding..
+  let i = 0;
+  for (let index = 2; index < n.length; index++) {
+    const element = n[index];
+
+    i++;
+    if (n(index * index === 0)) {
+      console.log(`${index} hi`);
+    }
+  }
+}
+mobius(10);
+
+// for (let index = 0; index < array.length; index++) {
+//   const element = array[index];
+// }
