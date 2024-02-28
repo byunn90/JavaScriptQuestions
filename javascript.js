@@ -1,6 +1,8 @@
 // Find the Index
 // Create a function that takes an array and a string as arguments and returns the index of the string.
 
+// const { errorMonitor } = require("mysql2/typings/mysql/lib/Connection");
+
 // Examples
 // findIndex(["hi", "edabit", "fgh", "abc"], "fgh") ➞ 2
 
@@ -1037,7 +1039,49 @@
 // 2 Add Ay to the end of the word
 
 function pigIt(str) {
-  //Code here
-  console.log(str);
+  if (typeof str !== "string") {
+    return false;
+  }
+  const input = str.split(" ");
+  let transform = [];
+
+  for (let index = 0; index < input.length; index++) {
+    const element = input[index];
+
+    if (element.length > 0) {
+      const modifiedElement = element.substring(1) + element[0] + "ay";
+      transform.push(modifiedElement);
+    } else {
+      transform.push(element);
+    }
+  }
+
+  return transform.join(" ");
 }
-console.log(pigIt("Hi"));
+
+console.log(pigIt("Pig latin is cool"));
+console.log(pigIt("Hello world !"));
+
+// Code with regex
+function pigIt(str) {
+  const input = str.split(" ");
+  let transform = [];
+
+  for (let index = 0; index < input.length; index++) {
+    const element = input[index];
+
+    if (/^[a-zA-Z]+$/.test(element)) {
+      const modifiedElement = element.substring(1) + element[0] + "ay";
+      transform.push(modifiedElement);
+    } else {
+      transform.push(element);
+    }
+  }
+
+  return transform.join(" ");
+}
+
+// Test examples
+console.log(pigIt("Pig latin is cool")); // Should return "igPay atinlay siay oolcay"
+console.log(pigIt("Hello world !")); // Should return "elloHay orldway !"
+console.log(pigIt("O tempora o mores!")); // Should match the e
