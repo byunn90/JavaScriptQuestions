@@ -1018,6 +1018,26 @@
 
 // Empty list is considered to have zero greatest sum. Note that the empty list or array is also a valid sublist/subarray.
 
-var maxSequence = function (arr) {
-  // ...
-};
+// var maxSequence = function (arr) {
+//   const newSum = [];
+//   for (let index = 0; index < arr.length; index++) {
+//     const element = arr[index];
+//   }
+// };
+
+// maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4]);
+// should be 6: [4, -1, 2, 1]
+// Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+
+// Examples
+// pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
+// pigIt('Hello world !');     // elloHay orldway !
+
+// 1 Every first Letter of each word has to be at the end
+// 2 Add Ay to the end of the word
+
+function pigIt(str) {
+  //Code here
+  console.log(str);
+}
+console.log(pigIt("Hi"));
