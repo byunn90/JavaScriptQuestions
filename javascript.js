@@ -1081,7 +1081,6 @@ function pigIt(str) {
   return transform.join(" ");
 }
 
-// Test examples
-console.log(pigIt("Pig latin is cool")); // Should return "igPay atinlay siay oolcay"
-console.log(pigIt("Hello world !")); // Should return "elloHay orldway !"
-console.log(pigIt("O tempora o mores!")); // Should match the e
+console.log(pigIt("Pig latin is cool"));
+console.log(pigIt("Hello world !"));
+console.log(pigIt("O tempora o mores!"));
