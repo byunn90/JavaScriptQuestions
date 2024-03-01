@@ -1038,49 +1038,130 @@
 // 1 Every first Letter of each word has to be at the end
 // 2 Add Ay to the end of the word
 
-function pigIt(str) {
-  if (typeof str !== "string") {
-    return false;
-  }
-  const input = str.split(" ");
-  let transform = [];
+// function pigIt(str) {
+//   if (typeof str !== "string") {
+//     return false;
+//   }
+//   const input = str.split(" ");
+//   let transform = [];
 
-  for (let index = 0; index < input.length; index++) {
-    const element = input[index];
+//   for (let index = 0; index < input.length; index++) {
+//     const element = input[index];
 
-    if (element.length > 0) {
-      const modifiedElement = element.substring(1) + element[0] + "ay";
-      transform.push(modifiedElement);
-    } else {
-      transform.push(element);
+//     if (element.length > 0) {
+//       const modifiedElement = element.substring(1) + element[0] + "ay";
+//       transform.push(modifiedElement);
+//     } else {
+//       transform.push(element);
+//     }
+//   }
+
+//   return transform.join(" ");
+// }
+
+// console.log(pigIt("Pig latin is cool"));
+// console.log(pigIt("Hello world !"));
+
+// // Code with regex
+// function pigIt(str) {
+//   const input = str.split(" ");
+//   let transform = [];
+
+//   for (let index = 0; index < input.length; index++) {
+//     const element = input[index];
+
+//     if (/^[a-zA-Z]+$/.test(element)) {
+//       const modifiedElement = element.substring(1) + element[0] + "ay";
+//       transform.push(modifiedElement);
+//     } else {
+//       transform.push(element);
+//     }
+//   }
+
+//   return transform.join(" ");
+// }
+
+// console.log(pigIt("Pig latin is cool"));
+// console.log(pigIt("Hello world !"));
+// console.log(pigIt("O tempora o mores!"));
+// Finished
+
+// const myBtn = document.getElementById("checking-my-btn");
+// myBtn.addEventListener("click", () => {
+//   alert("Thanks for clicking me");
+// });
+
+// function checking(x) {
+//   let letCheck = document.querySelector(".checking-api");
+//   letCheck.innerHTML = `${x}`;
+// }
+// const fetchPromise =
+//   "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json";
+
+// async function fetchData() {
+//   try {
+//     const response = await fetch(fetchPromise);
+//     if (!response.ok) {
+//       throw new error("Network response was not ok");
+//     }
+//     const data = await response.json();
+//     console.log(data);
+//     data.map((e) => console.log(e.name));
+//   } catch (error) {
+//     console.error(
+//       "There has been a problem with your fetch operation: ",
+//       error
+//     );
+//   }
+// }
+// console.log(fetchData());
+
+// checking("Hi thanks acepting my Input");
+
+// fetchPromise.then((response) => {
+//   console.log(`Recieved response ${response}`);
+// });
+
+// fetchPromise.then((response) => {
+//   const jsonPromise = response.json();
+//   jsonPromise.then((data) => {
+//     console.log(data[0].name);
+//   });
+// });
+
+// async function myApi(url) {
+//   const result = await fetch(url);
+//   try {
+//     let data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.log("Error", error);
+//   }
+// }
+// myApi(fetchPromise).then((data) => console.log(data));
+/*
+Naughty or Nice
+361886% of 261724 of 1,570thevjm
+ JavaScript
+Node v18.x
+VIM
+EMACS
+Instructions
+Output
+Santa is coming to town and he needs your help finding out who's been naughty or nice. You will be given an entire year of JSON data following this format:
+
+{
+    January: {
+        '1': 'Naughty','2': 'Naughty', ..., '31': 'Nice'
+    },
+    February: {
+        '1': 'Nice','2': 'Naughty', ..., '28': 'Nice'
+    },
+    ...
+    December: {
+        '1': 'Nice','2': 'Nice', ..., '31': 'Naughty'
     }
-  }
-
-  return transform.join(" ");
 }
+Your function should return "Naughty!" or "Nice!" depending on the total number of occurrences in a given year (whichever one is greater). If both are equal, return "Nice!"
 
-console.log(pigIt("Pig latin is cool"));
-console.log(pigIt("Hello world !"));
-
-// Code with regex
-function pigIt(str) {
-  const input = str.split(" ");
-  let transform = [];
-
-  for (let index = 0; index < input.length; index++) {
-    const element = input[index];
-
-    if (/^[a-zA-Z]+$/.test(element)) {
-      const modifiedElement = element.substring(1) + element[0] + "ay";
-      transform.push(modifiedElement);
-    } else {
-      transform.push(element);
-    }
-  }
-
-  return transform.join(" ");
-}
-
-console.log(pigIt("Pig latin is cool"));
-console.log(pigIt("Hello world !"));
-console.log(pigIt("O tempora o mores!"));
+*/
