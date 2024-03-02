@@ -1181,10 +1181,26 @@ Check out my other kata!
 */
 
 function squareUp(n) {
-  return []; // Do your magic!
-  for (let index = 0; index < array.length; index++) {
-    const element = array[index];
-    for (const iterator of object) {
+  const squareCal = n * n;
+  let emptyArray = new Array(squareCal).fill(0);
+  for (let row = 1; row <= n; row++) {
+    emptyArray[row] = row + 1;
+    const reversed = emptyArray.reverse();
+    const rowChanger = n * (row + 1);
+    console.log(rowChanger);
+    // emptyArray.reverse();
+    console.log(reversed);
+    // The inner loop needs to place the numbers in reverse order for each row.
+    // This means starting from the end of the row.
+    for (let col = n; col > 0; col--) {
+      emptyArray[col] = col + 1;
+      // emptyArray.reverse();
+      // console.log(emptyArray);
+      // Calculate the index in the flat array where the number should be placed.
+      // This calculation will depend on both `row` and `col`.
+      // Then, decide whether to place a number or leave it as 0, based on the pattern rules.
     }
   }
+  // return [];
 }
+console.log(squareUp(4));
