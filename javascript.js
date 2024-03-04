@@ -1234,9 +1234,17 @@ Based on: https://leetcode.com/problems/two-sum/
 twoSum([1, 2, 3], 4) // returns [0, 2] or [2, 0]
 twoSum([3, 2, 4], 6) // returns [1, 2] or [2, 1]
 */
+// Go over this again Note
 function twoSum(numbers, target) {
-  let map = new map();
-  map.set([...numbers], target);
-  map.get([0], 1);
+  let map = new Map();
+  for (let i = 0; i < numbers.length; i++) {
+    let complement = target - numbers[i];
+    if (map.has(complement)) {
+      return [map.get(complement), i];
+    }
+    map.set(numbers[i], i);
+  }
+  return [];
 }
-twoSum([1, 2, 3, 4][0]);
+
+console.log(twoSum([1, 2, 3, 4], 3));
