@@ -1180,6 +1180,7 @@ n<=1000.
 Check out my other kata!
 */
 
+/*
 function squareUp(n) {
   const squareCal = n * n;
   let emptyArray = new Array(squareCal).fill(0);
@@ -1204,3 +1205,38 @@ function squareUp(n) {
   // return [];
 }
 console.log(squareUp(4));
+*/
+// Question 1 today code wars
+// Property
+// Some rectangles have a recurring ratio of side lengths (the most famous example is A-series paper). For some of them, when removing a number of inner squares (each such square must have the side length of the smallest side of the rectangle), the ratio a / b is the same as b / c.
+
+// Example (n = 1)
+
+// Task
+// Given the number of inner squares to remove from such rectangle n, what is value of the ratio of the longer side over the smaller side? Don't round your result.
+
+// 1 ≤ n ≤ 1000
+// function getRectangleRatio(n) {
+
+//   return 1;
+// }
+// getRectangleRatio();
+// come back to it later
+/*
+Write a function that takes an array of numbers (integers for the tests) and a target number. It should find two different items in the array that, when added together, give the target value. The indices of these items should then be returned in a tuple / list (depending on your language) like so: (index1, index2).
+
+For the purposes of this kata, some tests may have multiple answers; any valid solutions will be accepted.
+
+The input will always be valid (numbers will be an array of length 2 or greater, and all of the items will be numbers; target will always be the sum of two different items from that array).
+
+Based on: https://leetcode.com/problems/two-sum/
+
+twoSum([1, 2, 3], 4) // returns [0, 2] or [2, 0]
+twoSum([3, 2, 4], 6) // returns [1, 2] or [2, 1]
+*/
+function twoSum(numbers, target) {
+  let map = new map();
+  map.set([...numbers], target);
+  map.get([0], 1);
+}
+twoSum([1, 2, 3, 4][0]);
