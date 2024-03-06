@@ -1269,24 +1269,51 @@ twoSum([3, 2, 4], 6) // returns [1, 2] or [2, 1]
 // 0 <= x <= 4
 // 0 <= y <= 4
 
-console.log(points("5:2, 2:2, 1:1, 3:3"));
+// console.log(points("5:2, 2:2, 1:1, 3:3"));
 
-function points(games) {
-  const gameScores = games.split(", ");
-  let totalPoints = 0;
+// function points(games) {
+//   const gameScores = games.split(", ");
+//   let totalPoints = 0;
 
-  for (let game of gameScores) {
-    const scores = game.split(":");
-    const x = parseInt(scores[0], 10);
-    const y = parseInt(scores[1], 10);
+//   for (let game of gameScores) {
+//     const scores = game.split(":");
+//     const x = parseInt(scores[0], 10);
+//     const y = parseInt(scores[1], 10);
 
-    if (x > y) {
-      totalPoints += 3;
-    } else if (x === y) {
-      totalPoints += 1;
+//     if (x > y) {
+//       totalPoints += 3;
+//     } else if (x === y) {
+//       totalPoints += 1;
+//     }
+//   }
+
+//   return totalPoints;
+// }
+// console.log(points("5:2, 2:2, 1:1, 3:3"));
+
+/*
+Array.diff
+Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+
+It should remove all values from list a, which are present in list b keeping their order.
+
+arrayDiff([1,2],[1]) == [2]
+If a value is present in b, all of its occurrences must be removed from the other:
+
+arrayDiff([1,2,2,2,3],[2]) == [1,3]
+*/
+// We have to loop and check both array if it has the same elements remove them
+function arrayDiff(a, b) {
+  for (let i = 0; i < a.length; i++) {
+    for (let x = 0; x < b.length; x++) {
+      console.log(a[i] + " and " + b[x]);
+      if (a[i] === b[x]) {
+        a.splice(i, 1);
+        i--;
+      }
     }
   }
-
-  return totalPoints;
+  return a;
 }
-console.log(points("5:2, 2:2, 1:1, 3:3"));
+
+console.log(arrayDiff([1, 2, 2, 4], [1, 2, 5, 6]));
