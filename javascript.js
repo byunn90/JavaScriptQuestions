@@ -1343,15 +1343,31 @@ The main idea is to count all the occurring characters in a string. If you have 
 
 What if the string is empty? Then the result should be empty object literal, {}.
 */
-function count(string) {
-  let inTrapment = {};
-  for (const iterator of string) {
-    if (inTrapment[iterator]) {
-      inTrapment[iterator]++;
-    } else {
-      inTrapment[iterator] = 1;
-    }
-  }
-  return console.log(inTrapment);
+// function count(string) {
+//   let inTrapment = {};
+//   for (const iterator of string) {
+//     if (inTrapment[iterator]) {
+//       inTrapment[iterator]++;
+//     } else {
+//       inTrapment[iterator] = 1;
+//     }
+//   }
+//   return console.log(inTrapment);
+// }
+// count("aaaaaaaaahizz");
+/*
+
+Multiply the number
+// Wake up exercise
+Jack really likes his number five: the trick here is that you have to multiply each number by 5 raised to the number of digits of each numbers, so, for example:
+
+  3 -->    15  (  3 * 5¹)
+ 10 -->   250  ( 10 * 5²)
+200 --> 25000  (200 * 5³)
+  0 -->     0  (  0 * 5¹)
+ -3 -->   -15  ( -3 * 5¹)
+
+*/
+function multiply(number) {
+  //your code here
 }
-count("aaaaaaaaahizz");
