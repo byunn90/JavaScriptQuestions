@@ -1456,9 +1456,51 @@ kprimes_step(2, 2, 0, 50) => [[4, 6], [33, 35]]
 kprimes_step(6, 14, 2113665, 2113889) => [[2113722, 2113736]])
 kprimes_step(2, 10, 0, 50) => [[4, 14], [15, 25], [25, 35], [39, 49]]
 kprimes_step(5, 20, 0, 50) => []
-*/
-
 // Kyku 6
 function kprimesStep(k, step, start, nd) {
   // your code
 }
+*/
+
+// function maps(x) {
+//   return x.map((element) => console.log(parseInt(element) * 2));
+// }
+
+// maps([1, 2, 3, 4, 5]);
+
+/*
+Task
+Coding in function bigToSmall. function accept 1 parameter arr(2D number array).
+
+Your task is: First to all, refer to the example above, flat output arr to a one-dimensional array.
+
+And then sort array in descending order.
+
+Finally, use the separator ">" to connect the elements into a string.
+
+Don't complain about the situation like 1>1 is not reasonable, it is just a separator.
+
+Some example:
+
+bigToSmall([[1,2],[3,4],[5,6]]) should return "6>5>4>3>2>1"
+bigToSmall([[1,3,5],[2,4,6]]) should return "6>5>4>3>2>1"
+bigToSmall([[1,1],[1],[1,1]]) should return "1>1>1>1>1"
+*/
+
+function bigToSmall(arr) {
+  const combineArray = arr.flat();
+  const sortedArray = combineArray.sort((a, b) => b - a).join(">");
+
+  return console.log(sortedArray);
+}
+
+bigToSmall([
+  [1, 2],
+  [3, 4],
+  [5, 6],
+]);
+bigToSmall([
+  [1, 3, 5],
+  [2, 4, 6],
+]);
+bigToSmall([[1, 1], [1], [1, 1]]);
