@@ -1487,20 +1487,31 @@ bigToSmall([[1,3,5],[2,4,6]]) should return "6>5>4>3>2>1"
 bigToSmall([[1,1],[1],[1,1]]) should return "1>1>1>1>1"
 */
 
-function bigToSmall(arr) {
-  const combineArray = arr.flat();
-  const sortedArray = combineArray.sort((a, b) => b - a).join(">");
+// function bigToSmall(arr) {
+//   const combineArray = arr.flat();
+//   const sortedArray = combineArray.sort((a, b) => b - a).join(">");
 
-  return console.log(sortedArray);
-}
+//   return console.log(sortedArray);
+// }
 
-bigToSmall([
-  [1, 2],
-  [3, 4],
-  [5, 6],
-]);
-bigToSmall([
-  [1, 3, 5],
-  [2, 4, 6],
-]);
-bigToSmall([[1, 1], [1], [1, 1]]);
+// bigToSmall([
+//   [1, 2],
+//   [3, 4],
+//   [5, 6],
+// ]);
+// bigToSmall([
+//   [1, 3, 5],
+//   [2, 4, 6],
+// ]);
+// bigToSmall([[1, 1], [1], [1, 1]]);
+/*
+pyramid Array
+
+Write a function that when given a number >= 0, returns an Array of ascending length subarrays.
+
+pyramid(0) => [ ]
+pyramid(1) => [ [1] ]
+pyramid(2) => [ [1], [1, 1] ]
+pyramid(3) => [ [1], [1, 1], [1, 1, 1] ]
+Note: the subarrays should be filled with 1s
+*/
