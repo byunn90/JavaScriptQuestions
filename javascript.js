@@ -1566,10 +1566,47 @@ solution([-10, -9, -8, -6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 1
 */
 // If the integers in the list are not consecutive, it means there is a gap or break between the current integer and the previous integer in the list.
 function solution(list) {
-  const range = [list];
-  for (let index = 0; index < list.length; index++) {
-    const element = list[index] - list[index - 1];
-    console.log(element);
+  let ranges = [];
+  let start = list[0];
+  let end = list[0];
+
+  // Iterate through the array
+  for (let index = 1; index < list.length; index++) {
+    // Check if the current number is consecutive with the previous number
+    if (list[index] - list[index - 1] === 1) {
+      // Update the end of the current range to the current number
+      end = list[index];
+    } else {
+      // If the numbers are not consecutive, handle the current range:
+      // Check if the current range spans at least 3 numbers
+      if (end - start >= 2) {
+        // Add the range in the format "start-end" to the ranges array
+        ranges.push(`${start}-${end}`);
+      } else {
+        // If the range does not span at least 3 numbers, add the individual numbers separately
+        for (let i = start; i <= end; i++) {
+          ranges.push(i);
+        }
+      }
+
+      // Reset the start and end to the current number to start a new range
+      start = list[index];
+      end = list[index];
+    }
   }
+
+  // Handle the last range after the loop ends
+  if (end - start >= 2) {
+    ranges.push(`${start}-${end}`);
+  } else {
+    for (let i = start; i <= end; i++) {
+      ranges.push(i);
+    }
+  }
+
+  // Combine ranges array into a comma-separated string
+  return ranges.join(",");
 }
-solution([1, 2, 3, 4, 5, 6]);
+
+// Test the function with an example list
+console.log(solution([1, 2, 3, 4, 5, 6])); // Should print "1-6"
