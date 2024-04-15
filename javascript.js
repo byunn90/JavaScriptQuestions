@@ -1515,3 +1515,33 @@ pyramid(2) => [ [1], [1, 1] ]
 pyramid(3) => [ [1], [1, 1], [1, 1, 1] ]
 Note: the subarrays should be filled with 1s
 */
+/*
+For every good kata idea there seem to be quite a few bad ones!
+
+In this kata you need to check the provided array (x) for good ideas 'good' and bad ideas 'bad'. If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'. If there are no good ideas, as is often the case, return 'Fail!'.
+
+
+*/
+// for good ideas 'good' and bad ideas 'bad'.
+// if there are one or two good ideas return 'Publish'
+// if there are more than 2 return 'i smell a series'
+// if there are no good ideas as is often the case return 'fail'
+function well(x) {
+  let good = 0;
+  let bad = 0;
+  for (let index = 0; index < x.length; index++) {
+    if (x[index] === "good") {
+      good++;
+    } else if (x[index]) {
+      bad++;
+    }
+  }
+  if (bad >= 1 && good === 0) {
+    return "Fail";
+  } else if (bad >= 1 && good === 2) {
+    return "Publish";
+  } else if (bad >= 1 && good >= 3) {
+    return "We have a series";
+  }
+}
+well(["bad", "good", "good"]);
