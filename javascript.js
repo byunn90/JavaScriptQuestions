@@ -1536,12 +1536,14 @@ function well(x) {
       bad++;
     }
   }
+  console.log(good);
+  console.log(bad);
   if (bad >= 1 && good === 0) {
-    return "Fail";
-  } else if (bad >= 1 && good === 2) {
-    return "Publish";
+    return console.log("Fail");
+  } else if (bad === 1 && good === 2) {
+    return console.log("Publish");
   } else if (bad >= 1 && good >= 3) {
-    return "We have a series";
+    return console.log("We have a series");
   }
 }
 well(["bad", "good", "good"]);
