@@ -1526,24 +1526,50 @@ In this kata you need to check the provided array (x) for good ideas 'good' and 
 // if there are one or two good ideas return 'Publish'
 // if there are more than 2 return 'i smell a series'
 // if there are no good ideas as is often the case return 'fail'
-function well(x) {
-  let good = 0;
-  let bad = 0;
-  for (let index = 0; index < x.length; index++) {
-    if (x[index] === "good") {
-      good++;
-    } else if (x[index]) {
-      bad++;
-    }
-  }
-  console.log(good);
-  console.log(bad);
-  if (bad >= 1 && good === 0) {
-    return console.log("Fail");
-  } else if (bad === 1 && good === 2) {
-    return console.log("Publish");
-  } else if (bad >= 1 && good >= 3) {
-    return console.log("We have a series");
+// function well(x) {
+//   let good = 0;
+//   let bad = 0;
+//   for (let index = 0; index < x.length; index++) {
+//     if (x[index] === "good") {
+//       good++;
+//     } else if (x[index]) {
+//       bad++;
+//     }
+//   }
+//   if (good === 0) {
+//     return "Fail!";
+//   } else if (bad === 1 || good === 2) {
+//     return "Publish!";
+//   } else if (good > 2) {
+//     return "I smell a series!";
+//   }
+// }
+// console.log(well(["bad", "bad", "bad"]));
+// console.log(
+//   well(["good", "bad", "bad", "bad", "bad", "good", "bad", "bad", "good"])
+// );
+// console.log(well(["good", "bad", "bad", "bad", "bad"]));
+// Next question Range Extraction
+/*
+DESCRIPTION:
+A format for expressing an ordered list of integers is to use a comma separated list of either
+
+individual integers
+or a range of integers denoted by the starting integer separated from the end integer in the range by a dash, '-'. The range includes all integers in the interval including both endpoints. It is not considered a range unless it spans at least 3 numbers. For example "12,13,15-17"
+Complete the solution so that it takes a list of integers in increasing order and returns a correctly formatted string in the range format.
+
+Example:
+
+solution([-10, -9, -8, -6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18, 19, 20]);
+// returns "-10--8,-6,-3-1,3-5,7-11,14,15,17-20"
+
+*/
+// If the integers in the list are not consecutive, it means there is a gap or break between the current integer and the previous integer in the list.
+function solution(list) {
+  const range = [list];
+  for (let index = 0; index < list.length; index++) {
+    const element = list[index] - list[index - 1];
+    console.log(element);
   }
 }
-well(["bad", "good", "good"]);
+solution([1, 2, 3, 4, 5, 6]);
