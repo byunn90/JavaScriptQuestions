@@ -1621,47 +1621,35 @@ solve(["Begin on Road A","Right on Road B","Right on Road C","Left on Road D"]) 
 solve(['Begin on Lua Pkwy', 'Right on Sixth Alley', 'Right on 1st Cr']) =  ['Begin on 1st Cr', 'Left on Sixth Alley', 'Left on Lua Pkwy']
 */
 
-function solve(arr) {
-  // Reverse the array
-  const reversedArr = arr.reverse();
-
-  // Adjust the directions
-  const reversedArrAdjusted = reversedArr.map((direction) => {
-    // Check if the direction starts with "Begin"
-    if (direction.startsWith("Begin")) {
-      // Modify "Begin" with the reversed road
-      const roadName = direction.split(" ").slice(2).join(" ");
-      return `Begin on Road ${roadName.split(" ")[1]}`;
-    } else if (direction.startsWith("Right")) {
-      // Replace "Right" with "Left"
-      return direction.replace("Right", "Left");
-    } else if (direction.startsWith("Left")) {
-      // Replace "Left" with "Right"
-      return direction.replace("Left", "Right");
-    } else {
-      // Return the direction as is
-      return direction;
-    }
-  });
-
-  // Return the adjusted array
-  return reversedArrAdjusted;
-}
-
-// Example usage
-console.log(
-  solve([
-    "Begin on Road A",
-    "Right on Road B",
-    "Right on Road C",
-    "Left on Road D",
-  ])
-);
-
 // O
 
 // = ['Begin on Road D', 'Right on Road C', 'Left on Road B', 'Left on Road A']
 // solve(['Begin on Lua Pkwy', 'Right on Sixth Alley', 'Right on 1st Cr']) =  ['Begin on 1st Cr', 'Left on Sixth Alley', 'Left on Lua Pkwy']
+// function solve(arr) {
+//   const retrograde = arr.reverse;
+
+//   const reversedArrAdjusted = retrograde.map((directions) => {
+//     if (directions.startsWith("Begin")) {
+//       // Not done yet
+//     } else if (directions.startsWith("left")) {
+//       console.log(directions);
+//       return directions.replace("left", "right");
+//     } else if (directions.startsWith("right")) {
+//       console.log(directions);
+//       return directions.replace("right", "left");
+//     }
+//     return directions;
+//   });
+//   return reversedArrAdjusted;
+// }
+// solve([
+//   "Begin on Road A",
+//   "Right on Road B",
+//   "Right on Road C",
+//   "Left on Road D",
+// ]);
+// Result
+//  ['Begin on Road D', 'Right on Road C', 'Left on Road B', 'Left on Road A']
 /*
 
 How Many Differences of Squares?
@@ -1681,3 +1669,131 @@ n = 20 ==> 15
 n = 6427 ==> 4820
 
 */
+/*
+Spinning Rings
+Imagine two rings with numbers on them. The inner ring spins clockwise (decreasing by 1 each spin) and the outer ring spins counter clockwise (increasing by 1 each spin). We start with both rings aligned on 0 at the top, and on each move we spin each ring one increment. How many moves will it take before both rings show the same number at the top again?
+
+The inner ring has integers from 0 to innerMax and the outer ring has integers from 0 to outerMax, where innerMax and outerMax are integers >= 1.
+
+e.g. if innerMax is 2 and outerMax is 3 then after
+1 move: inner = 2, outer = 1
+2 moves: inner = 1, outer = 2
+3 moves: inner = 0, outer = 3
+4 moves: inner = 2, outer = 0
+5 moves: inner = 1, outer = 1
+Therefore it takes 5 moves for the two rings to reach the same number
+Therefore spinningRings(2, 3) = 5
+e.g. if innerMax is 3 and outerMax is 2 then after
+1 move: inner = 3, outer = 1
+2 moves: inner = 2, outer = 2
+Therefore it takes 2 moves for the two rings to reach the same number
+spinningRings(3, 2) = 2
+
+*/
+/*
+function spinningRings(innerMax, outerMax) {
+  let innerPos = 0; // Starting position of the inner ring
+  let outerPos = 0; // Starting position of the outer ring
+  let moves = 0; // Counter for the number of moves
+
+  // Continue looping until the inner and outer rings align
+  while (innerPos !== outerPos) {
+    // Decrease the position of the inner ring
+    innerPos -= 1;
+    // Wrap around if the new inner position goes below 0
+    if (innerPos < 0) {
+      innerPos = innerMax;
+    }
+
+    // Increase the position of the outer ring
+    outerPos += 1;
+    // Wrap around if the new outer position goes above outerMax
+    if (outerPos > outerMax) {
+      outerPos = 0;
+    }
+
+    // Increment the move counter
+    moves++;
+  }
+
+  // Return the number of moves taken to align the rings
+  return moves;
+}
+
+// Example usage:
+console.log(spinningRings(2, 3)); // Expected: 5
+console.log(spinningRings(3, 2)); // Expected: 2
+console.log(spinningRings(1, 1)); // Expected: 1
+console.log(spinningRings(2, 2)); // Expected: 3
+console.log(spinningRings(3, 3)); // Expected: 2
+*/
+/*
+Flick Switch
+
+DESCRIPTION:
+Task
+Create a function that always returns True/true for every item in a given list.
+However, if an element is the word 'flick', switch to always returning the opposite boolean value.
+
+Examples
+['codewars', 'flick', 'code', 'wars'] ➞ [True, False, False, False]
+
+['flick', 'chocolate', 'adventure', 'sunshine'] ➞ [False, False, False, False]
+
+['bicycle', 'jarmony', 'flick', 'sheep', 'flick'] ➞ [True, True, False, False, True]
+Notes
+"flick" will always be given in lowercase.
+A list may contain multiple flicks.
+Switch the boolean value on the same element as the flick itself.
+
+*/
+
+/*
+function flickSwitch(arr) {
+  let check = true; // Initialize the check variable to true
+  let result = []; // Initialize an array to store the boolean results
+
+  // Iterate through the list
+  for (let index = 0; index < arr.length; index++) {
+    const element = arr[index];
+
+    // If the element is "flick", toggle the boolean state
+    if (element === "flick") {
+      check = !check;
+    }
+
+    // Append the current state of check to the result list
+    result.push(check);
+  }
+
+  // Return the final result array
+  return result;
+}
+flickSwitch(["codewars", "flick", "code", "wars"]);
+// Result ➞ [True, False, False, False]
+
+flickSwitch(["flick", "chocolate", "adventure", "sunshine"]);
+
+// Result ➞ [False, False, False, False]
+
+flickSwitch(["bicycle", "jarmony", "flick", "sheep", "flick"]);
+// Result ➞ [True, True, False, False, True]
+*/
+/*
+Convert PascalCase string into snake_case
+
+Complete the function/method so that it takes a PascalCase string and returns the string in snake_case notation. Lowercase characters can be numbers. If the method gets a number as input, it should return a string.
+
+Examples
+"TestController"  -->  "test_controller"
+"MoviesAndBooks"  -->  "movies_and_books"
+"App7Test"        -->  "app7_test"
+1                 -->  "1"
+*/
+
+function toUnderscore(string) {
+  // TODO: complete
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+  }
+}
