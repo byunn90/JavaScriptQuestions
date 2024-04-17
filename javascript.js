@@ -1790,10 +1790,32 @@ Examples
 "App7Test"        -->  "app7_test"
 1                 -->  "1"
 */
-
+// Step 1  Check the input type: if the input is a number, convert it to a string and return it.
+// Step 2 Use a regular expression to identify uppercase letter in the input string and replace them
+// with an underscore followed by the lowercase equivalent
+// Step 3  Handle the first character separtely: if the first character is uppercase, convert it to lowercase without adding an underscore
+// Step 4  Combine the converted characters to form the final snake_case string.
 function toUnderscore(string) {
   // TODO: complete
-  for (let index = 0; index < array.length; index++) {
-    const element = array[index];
+  const newArra = string.split(" ");
+  for (let index = 0; index < newArra.length; index++) {
+    const element = newArra[index];
+
+    if (/[A-Z]/.test(element)) {
+      // Define a regular expression pattern to match uppercase letters
+      const pattern = /([A-Z])/g;
+
+      // Replace the uppercase letters with an underscore followed by lowercase
+      const snakeCasedElement = element.replace(pattern, (match) => {
+        return "_" + match.toLowerCase();
+      });
+
+      // Output the result to the console
+      console.log(snakeCasedElement);
+    }
   }
 }
+toUnderscore("TestController");
+toUnderscore("MoviesAndBooks");
+toUnderscore("App7Test");
+toUnderscore("adaadaddd");
