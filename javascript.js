@@ -1565,6 +1565,7 @@ solution([-10, -9, -8, -6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 1
 
 */
 // If the integers in the list are not consecutive, it means there is a gap or break between the current integer and the previous integer in the list.
+/*
 function solution(list) {
   let ranges = [];
   let start = list[0];
@@ -1610,3 +1611,73 @@ function solution(list) {
 
 // Test the function with an example list
 console.log(solution([1, 2, 3, 4, 5, 6])); // Should print "1-6"
+*/
+/*
+Simple directions reversal
+
+In this Kata, you will be given directions and your task will be to find your way back.
+
+solve(["Begin on Road A","Right on Road B","Right on Road C","Left on Road D"]) = ['Begin on Road D', 'Right on Road C', 'Left on Road B', 'Left on Road A']
+solve(['Begin on Lua Pkwy', 'Right on Sixth Alley', 'Right on 1st Cr']) =  ['Begin on 1st Cr', 'Left on Sixth Alley', 'Left on Lua Pkwy']
+*/
+
+function solve(arr) {
+  // Reverse the array
+  const reversedArr = arr.reverse();
+
+  // Adjust the directions
+  const reversedArrAdjusted = reversedArr.map((direction) => {
+    // Check if the direction starts with "Begin"
+    if (direction.startsWith("Begin")) {
+      // Modify "Begin" with the reversed road
+      const roadName = direction.split(" ").slice(2).join(" ");
+      return `Begin on Road ${roadName.split(" ")[1]}`;
+    } else if (direction.startsWith("Right")) {
+      // Replace "Right" with "Left"
+      return direction.replace("Right", "Left");
+    } else if (direction.startsWith("Left")) {
+      // Replace "Left" with "Right"
+      return direction.replace("Left", "Right");
+    } else {
+      // Return the direction as is
+      return direction;
+    }
+  });
+
+  // Return the adjusted array
+  return reversedArrAdjusted;
+}
+
+// Example usage
+console.log(
+  solve([
+    "Begin on Road A",
+    "Right on Road B",
+    "Right on Road C",
+    "Left on Road D",
+  ])
+);
+
+// O
+
+// = ['Begin on Road D', 'Right on Road C', 'Left on Road B', 'Left on Road A']
+// solve(['Begin on Lua Pkwy', 'Right on Sixth Alley', 'Right on 1st Cr']) =  ['Begin on 1st Cr', 'Left on Sixth Alley', 'Left on Lua Pkwy']
+/*
+
+How Many Differences of Squares?
+DESCRIPTION:
+Some numbers can be expressed as a difference of two squares, for example, 20 = 62-42 and 21 = 52-22. Many numbers can be written this way, but not all.
+
+Your Task
+Complete the function that takes a positive integer n and returns the amount of numbers between 1 and n (inclusive) that can be represented as the difference of two perfect squares.
+
+Note: Your code should be able to handle n values up to 45000
+
+Examples
+n = 4 ==> 3
+n = 5 ==> 4
+n = 10 ==> 7
+n = 20 ==> 15
+n = 6427 ==> 4820
+
+*/
