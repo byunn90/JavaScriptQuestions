@@ -1795,27 +1795,154 @@ Examples
 // with an underscore followed by the lowercase equivalent
 // Step 3  Handle the first character separtely: if the first character is uppercase, convert it to lowercase without adding an underscore
 // Step 4  Combine the converted characters to form the final snake_case string.
-function toUnderscore(string) {
-  // TODO: complete
-  const newArra = string.split(" ");
-  for (let index = 0; index < newArra.length; index++) {
-    const element = newArra[index];
+// Very hard come back to it later
+/*
+function toUnderscore(input) {
+  const newArray = input.split(" ");
+  for (let index = 0; index < newArray.length; index++) {
+    const element = newArray[index];
+    console.log(element);
 
-    if (/[A-Z]/.test(element)) {
-      // Define a regular expression pattern to match uppercase letters
-      const pattern = /([A-Z])/g;
+    if() {
 
-      // Replace the uppercase letters with an underscore followed by lowercase
-      const snakeCasedElement = element.replace(pattern, (match) => {
-        return "_" + match.toLowerCase();
-      });
-
-      // Output the result to the console
-      console.log(snakeCasedElement);
     }
   }
 }
-toUnderscore("TestController");
-toUnderscore("MoviesAndBooks");
-toUnderscore("App7Test");
-toUnderscore("adaadaddd");
+
+toUnderscore("TestController"); // Output: test_controller
+toUnderscore("MoviesAndBooks"); // Output: movies_and_books
+toUnderscore("App7Test"); // Output: app7_test
+toUnderscore("adaadaddd"); // Output: adaadaddd
+toUnderscore(11111); // Output: 11111
+*/
+
+/*
+var a1 = "A",
+  a2 = "a",
+  b1 = "B",
+  b2 = "b",
+  c1 = "C",
+  c2 = "c",
+  d1 = "D",
+  d2 = "d",
+  e1 = "E",
+  e2 = "e",
+  n1 = "N",
+  n2 = "n";
+function Dad() {
+  //select some variable to combine "Dad"
+  return d1 + a1 + d1;
+}
+function Bee() {
+  //select some variable to combine "Bee"
+  return b1 + e2 + e2;
+}
+function banana() {
+  //select some variable to combine "banana"
+  return b1 + a1 + n2 + a1 + n2 + a1;
+}
+
+//answer some questions if you finished works above
+function answer1() {
+  //the answer should be "yes" or "no"
+  return "yes";
+}
+function answer2() {
+  //the answer should be "yes" or "no"
+  return "yes";
+}
+function answer3() {
+  //the answer should be "yes" or "no"
+  return "yes";
+}
+*/
+/*
+7 kyu
+Bubblesort Once
+DESCRIPTION:
+Overview
+Bubblesort is an inefficient sorting algorithm that is simple to understand and therefore often taught in introductory computer science courses as an example how not to sort a list. Nevertheless, it is correct in the sense that it eventually produces a sorted version of the original list when executed to completion.
+
+At the heart of Bubblesort is what is known as a pass. Let's look at an example at how a pass works.
+
+Consider the following list:
+
+9, 7, 5, 3, 1, 2, 4, 6, 8
+We initiate a pass by comparing the first two elements of the list. Is the first element greater than the second? If so, we swap the two elements. Since 9 is greater than 7 in this case, we swap them to give 7, 9. The list then becomes:
+
+7, 9, 5, 3, 1, 2, 4, 6, 8
+We then continue the process for the 2nd and 3rd elements, 3rd and 4th elements ... all the way up to the last two elements. When the pass is complete, our list becomes:
+
+7, 5, 3, 1, 2, 4, 6, 8, 9
+Notice that the largest value 9 "bubbled up" to the end of the list. This is precisely how Bubblesort got its name.
+
+Task
+Given an array of integers, your function bubblesortOnce/bubblesort_once/BubblesortOnce (or equivalent, depending on your language's naming conventions) should return a new array equivalent to performing exactly 1 complete pass on the original array. Your function should be pure, i.e. it should not mutate the input array.
+*/
+// function bubblesortOnce(a) {
+//   // TODO
+// }
+
+/*
+7 kyu
+Fizz Buzz
+Return an array containing the numbers from 1 to N, where N is the parametered value.
+
+Replace certain values however if any of the following conditions are met:
+
+If the value is a multiple of 3: use the value "Fizz" instead
+If the value is a multiple of 5: use the value "Buzz" instead
+If the value is a multiple of 3 & 5: use the value "FizzBuzz" instead
+N will never be less than 1.
+
+Method calling example:
+
+fizzbuzz(3) -->  [1, 2, "Fizz"]
+
+*/
+// Return an array
+// for (let index = 0; index < array.length; index++) {
+//   const element = array[index];
+
+// }
+const fizzBuzz = (n) => {
+  let i = 0;
+  for (i; i <= n; i++) {
+    const out =
+      i % 3 === 0 && i % 5 === 0
+        ? "FizzBuzz"
+        : i % 3 === 0
+        ? "Fizz"
+        : i % 5 === 0
+        ? "Buzz"
+        : i % ;
+  }
+};
+fizzBuzz(3);
+// fizzbuzz(3);
+// fizzbuzz(5);
+
+// fizzbuzz(3);
+// fizzbuzz(5);
+// fizzbuzz(3);
+// fizzbuzz(5);
+
+// const fizzBuzz = (n) => {
+//   // feel free to change this into a function :)
+//   for (let i = 0; i < n; i++) {
+//     const three = 3;
+//     const five = 5;
+//     let output =
+//       i % three === 0 && i % five === 0
+//         ? "FizzBuzz"
+//         : i % three === 0
+//         ? "Fizz"
+//         : i % five === 0
+//         ? "Buzz"
+//         : i;
+//     console.log(output);
+//   }
+// };
+// fizzBuzz(3);
+// fizzBuzz(5);
+// fizzBuzz(15);
