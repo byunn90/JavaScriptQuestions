@@ -1905,6 +1905,7 @@ fizzbuzz(3) -->  [1, 2, "Fizz"]
 //   const element = array[index];
 
 // }
+/*
 const fizzBuzz = (n) => {
   let i = 0;
   for (i; i <= n; i++) {
@@ -1946,3 +1947,79 @@ fizzBuzz(3);
 // fizzBuzz(3);
 // fizzBuzz(5);
 // fizzBuzz(15);
+*/
+/*
+8 kyu
+Count Odd Numbers below n
+Given a number n, return the number of positive odd numbers below n, EASY!
+
+Examples (Input -> Output)
+7  -> 3 (because odd numbers below 7 are [1, 3, 5])
+15 -> 7 (because odd numbers below 15 are [1, 3, 5, 7, 9, 11, 13])
+
+
+*/
+// function oddCount(n) {
+//   const emptyArray = [];
+//   for (let index = 1; index < n; index++) {
+//     const element = index;
+//     if (index % 2 !== 0) {
+//       emptyArray.push(element);
+//     }
+//   }
+//   return console.log(emptyArray.length);
+// }
+// oddCount(7);
+// oddCount(15);
+// oddCount(15023);
+// oddCount(15);
+
+/*
+Multiplication - Generators #2
+Multiplication - Generators #2
+Generators can be used to wonderful things. You can use them for numerous things, but here is one specific example. You are studying for a test so you must practice your multiplication, but you don't have a multiplication table showing the different examples. You have decided to create a generator that prints out a limitless list of time tables.
+Task
+Your generator must take one parameter `a` then everytime the generator is called you must return a string in the format of: `'a x b = c'` where c is the answer. Also, the value of `b`, which starts at 1, must increment by 1 each time!
+
+More Info: Generators (JS), Generators (Python), Generators (PHP), Generators (Java)
+
+
+*/
+
+// function* generator(a) {
+//   let b = 1;
+//   while (true) {
+//     let c = a * b;
+//     yield `${a} * ${b} = ${c}`;
+//     b++;
+//   }
+// }
+// generator(5);
+
+/*
+
+Write a function that takes a positive integer and returns the next smaller positive integer containing the same digits.
+
+For example:
+
+nextSmaller(21) == 12
+nextSmaller(531) == 513
+nextSmaller(2071) == 2017
+Return -1 (for Haskell: return Nothing, for Rust: return None), when there is no smaller number that contains the same digits. Also return -1 when the next smaller number with the same digits would require the leading digit to be zero.
+
+nextSmaller(9) == -1
+nextSmaller(111) == -1
+nextSmaller(135) == -1
+nextSmaller(1027) == -1 // 0721 is out since we don't write numbers with leading zeros
+some tests will include very large numbers.
+test data only employs positive integers.
+
+
+
+*/
+function nextSmaller(n) {
+  for (let index = 0; index < n; index++) {
+    const element = array[index];
+  }
+  return 0;
+}
