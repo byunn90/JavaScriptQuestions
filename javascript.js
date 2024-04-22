@@ -2081,35 +2081,55 @@ And so i did. But something is wrong, and I don't know why. Can you help me out?
 
 
 */
+var BARK = "woof woof";
+var SLEEP = "zzzzzzzzz....";
 
-const BARK = "woof woof";
-const SLEEP = "zzzzzzzzz....";
+function dog_bark_by_default(bark) {
+  bark = bark || true;
+  return bark ? BARK : SLEEP;
+}
 
-class Dog {
-  dogBarkByDefault(bark) {
-    bark = bark || true;
-    return bark ? BARK : SLEEP;
+function dog_bark_only_if_told_so(bark) {
+  bark = bark || false;
+  return bark ? BARK : SLEEP;
+}
+
+function dog_dont_bark_by_default(dont_bark) {
+  dont_bark = dont_bark || true;
+  return !dont_bark ? BARK : SLEEP;
+}
+
+function dog_dont_bark_only_if_told_so(dont_bark) {
+  dont_bark = dont_bark || false;
+  return !dont_bark ? BARK : SLEEP; // Corrected: Return BARK if dont_bark is falsy
+}
+
+class Dogs {
+  constructor(Bark, Sleep) {
+    this.Bark = Bark;
+    this.Sleep = Sleep;
   }
 
-  dogBarkOnlyIfToldSo(bark) {
-    bark = bark || false;
-    return bark ? BARK : SLEEP;
+  dog_bark_by_default() {
+    return dog_bark_by_default(this.Bark);
   }
 
-  dogDontBarkByDefault(dontBark) {
-    dontBark = dontBark || true;
-    return !dontBark ? BARK : SLEEP;
+  dog_bark_only_if_told_so(bark) {
+    return dog_bark_only_if_told_so(bark);
   }
 
-  dogDontBarkOnlyIfToldSo(dontBark) {
-    dontBark = dontBark || false;
-    return !dontBark ? BARK : SLEEP;
+  dog_dont_bark_by_default() {
+    return dog_dont_bark_by_default(this.Sleep);
+  }
+
+  dog_dont_bark_only_if_told_so(dont_bark) {
+    return dog_dont_bark_only_if_told_so(dont_bark);
   }
 }
 
-// Example usage:
-const myDog = new Dog();
-console.log(myDog.dogBarkByDefault()); // Output: 'woof woof'
-console.log(myDog.dogBarkOnlyIfToldSo()); // Output: 'zzzzzzzzz....'
-console.log(myDog.dogDontBarkByDefault()); // Output: 'woof woof'
-console.log(myDog.dogDontBarkOnlyIfToldSo()); // Output: 'woof woof'
+const myDogs = new Dogs(BARK, SLEEP);
+
+console.log(myDogs.dog_bark_by_default(true)); // Output: 'woof woof'
+console.log(myDogs.dog_bark_only_if_told_so(true)); // Output: 'woof woof'
+console.log(myDogs.dog_dont_bark_by_default(false)); // Output: 'zzzzzzzzz....'
+console.log(myDogs.dog_dont_bark_only_if_told_so(false)); // Output: 'woof woof'
