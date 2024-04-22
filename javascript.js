@@ -2044,3 +2044,72 @@ Each user ID should be written in only lowercase characters
 Remove leading and trailing whitespaces
 
 */
+
+// class Dog {
+//   bark() {
+//     return "Woof";
+//   }
+// }
+// console.log(Dog.bark());
+// const dog = new Dog();
+// dog.bark();
+// function Dog(name, breed, sex, age) {
+//   this.name = name;
+//   this.breed = breed;
+//   this.sex = sex;
+//   this.age = age;
+// }
+// Dog.prototype.bark = function bark() {
+//   return "Woof!";
+// };
+/*
+7 kyu
+Who let the dogs out?
+24277% of 143918 of 926tiriana
+ JavaScript
+Node v18.x
+VIM
+EMACS
+Instructions
+Output
+I wanted to write some classes for dogs. In my model dogs either bark or sleep. I know that it is popular practice to set default values like this
+
+var value = value || DEFAULT_VALUE
+And so i did. But something is wrong, and I don't know why. Can you help me out?
+
+
+
+
+*/
+
+const BARK = "woof woof";
+const SLEEP = "zzzzzzzzz....";
+
+class Dog {
+  dogBarkByDefault(bark) {
+    bark = bark || true;
+    return bark ? BARK : SLEEP;
+  }
+
+  dogBarkOnlyIfToldSo(bark) {
+    bark = bark || false;
+    return bark ? BARK : SLEEP;
+  }
+
+  dogDontBarkByDefault(dontBark) {
+    dontBark = dontBark || true;
+    return !dontBark ? BARK : SLEEP;
+  }
+
+  dogDontBarkOnlyIfToldSo(dontBark) {
+    dontBark = dontBark || false;
+    return !dontBark ? BARK : SLEEP;
+  }
+}
+
+// Example usage:
+const myDog = new Dog();
+console.log(myDog.dogBarkByDefault()); // Output: 'woof woof'
+console.log(myDog.dogBarkOnlyIfToldSo()); // Output: 'zzzzzzzzz....'
+console.log(myDog.dogDontBarkByDefault()); // Output: 'woof woof'
+console.log(myDog.dogDontBarkOnlyIfToldSo()); // Output: 'woof woof'
