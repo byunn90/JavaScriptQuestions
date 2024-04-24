@@ -2081,55 +2081,198 @@ And so i did. But something is wrong, and I don't know why. Can you help me out?
 
 
 */
-var BARK = "woof woof";
-var SLEEP = "zzzzzzzzz....";
+// var BARK = "woof woof";
+// var SLEEP = "zzzzzzzzz....";
 
-function dog_bark_by_default(bark) {
-  bark = bark || true;
-  return bark ? BARK : SLEEP;
-}
+// function dog_bark_by_default(bark) {
+//   bark = bark || true;
+//   return bark ? BARK : SLEEP;
+// }
 
-function dog_bark_only_if_told_so(bark) {
-  bark = bark || false;
-  return bark ? BARK : SLEEP;
-}
+// function dog_bark_only_if_told_so(bark) {
+//   bark = bark || false;
+//   return bark ? BARK : SLEEP;
+// }
 
-function dog_dont_bark_by_default(dont_bark) {
-  dont_bark = dont_bark || true;
-  return !dont_bark ? BARK : SLEEP;
-}
+// function dog_dont_bark_by_default(dont_bark) {
+//   dont_bark = dont_bark || true;
+//   return !dont_bark ? BARK : SLEEP;
+// }
 
-function dog_dont_bark_only_if_told_so(dont_bark) {
-  dont_bark = dont_bark || false;
-  return !dont_bark ? BARK : SLEEP; // Corrected: Return BARK if dont_bark is falsy
-}
+// function dog_dont_bark_only_if_told_so(dont_bark) {
+//   dont_bark = dont_bark || false;
+//   return !dont_bark ? BARK : SLEEP; // Corrected: Return BARK if dont_bark is falsy
+// }
 
-class Dogs {
-  constructor(Bark, Sleep) {
-    this.Bark = Bark;
-    this.Sleep = Sleep;
+// class Dogs {
+//   constructor(Bark, Sleep) {
+//     this.Bark = Bark;
+//     this.Sleep = Sleep;
+//   }
+
+//   dog_bark_by_default() {
+//     return dog_bark_by_default(this.Bark);
+//   }
+
+//   dog_bark_only_if_told_so(bark) {
+//     return dog_bark_only_if_told_so(bark);
+//   }
+
+//   dog_dont_bark_by_default() {
+//     return dog_dont_bark_by_default(this.Sleep);
+//   }
+
+//   dog_dont_bark_only_if_told_so(dont_bark) {
+//     return dog_dont_bark_only_if_told_so(dont_bark);
+//   }
+// }
+
+// const myDogs = new Dogs(BARK, SLEEP);
+
+// console.log(myDogs.dog_bark_by_default(true)); // Output: 'woof woof'
+// console.log(myDogs.dog_bark_only_if_told_so(true)); // Output: 'woof woof'
+// console.log(myDogs.dog_dont_bark_by_default(false)); // Output: 'zzzzzzzzz....'
+// console.log(myDogs.dog_dont_bark_only_if_told_so(false)); // Output: 'woof woof'
+// const numberFive = [1, 2, 3, 4, 5];
+
+// function toDo(array) {
+//   const result = array.map((element) => toDo2(element));
+//   return console.log(result);
+// }
+
+// function toDo2(x) {
+//   return console.log(x * 5);
+// }
+
+// toDo(numberFive);
+
+// function bigToSmall(arr) {
+//   const newElement = arr.flat();
+
+//   newElement.sort((a, b) => b - a);
+
+//   return newElement.join(">");
+// }
+// bigToSmall([
+//   [1, 2],
+//   [3, 4],
+//   [5, 6],
+// ]);
+// bigToSmall([
+//   [1, 3, 5],
+//   [2, 4, 6],
+// ]);
+// bigToSmall([[1, 1], [1], [1, 1]]);
+
+/*
+function pickIt(arr) {
+  let odd = [],
+    even = [];
+
+  for (let index = 0; index < arr.length; index++) {
+    const element = arr[index];
+
+    if (element % 2 === 0) {
+      even.push(element);
+    } else {
+      odd.push(element);
+    }
   }
 
-  dog_bark_by_default() {
-    return dog_bark_by_default(this.Bark);
-  }
-
-  dog_bark_only_if_told_so(bark) {
-    return dog_bark_only_if_told_so(bark);
-  }
-
-  dog_dont_bark_by_default() {
-    return dog_dont_bark_by_default(this.Sleep);
-  }
-
-  dog_dont_bark_only_if_told_so(dont_bark) {
-    return dog_dont_bark_only_if_told_so(dont_bark);
-  }
+  return [odd, even];
 }
 
-const myDogs = new Dogs(BARK, SLEEP);
+const result = pickIt([3, 4, 5, 12, 11, 11, 3]);
+console.log(result);
+*/
 
-console.log(myDogs.dog_bark_by_default(true)); // Output: 'woof woof'
-console.log(myDogs.dog_bark_only_if_told_so(true)); // Output: 'woof woof'
-console.log(myDogs.dog_dont_bark_by_default(false)); // Output: 'zzzzzzzzz....'
-console.log(myDogs.dog_dont_bark_only_if_told_so(false)); // Output: 'woof woof'
+/*
+Find the force of gravity between two objects
+Your job is to find the gravitational force between two spherical objects (obj1 , obj2).
+
+input
+Two arrays are given :
+
+arr_val (value array), consists of 3 elements
+1st element : mass of obj 1
+2nd element : mass of obj 2
+3rd element : distance between their centers
+arr_unit (unit array), consists of 3 elements
+1st element : unit for mass of obj 1
+2nd element : unit for mass of obj 2
+3rd element : unit for distance between their centers
+mass units are :
+
+kilogram (kg)
+gram (g)
+milligram (mg)
+microgram (μg)
+pound (lb)
+distance units are :
+
+meter (m)
+centimeter (cm)
+millimeter (mm)
+micrometer (μm)
+feet (ft)
+Note
+value of G = 6.67 × 10−11 N⋅kg−2⋅m2
+
+1 ft = 0.3048 m
+
+1 lb = 0.453592 kg
+
+return value must be Newton for force (obviously)
+
+μ copy this from here to use it in your solution
+
+*/
+function solution(arr_val, arr_unit) {
+  // Convert masses and distance to SI units
+  const m1 = conversionConverter(arr_val[0], arr_unit[0]);
+  const m2 = conversionConverter(arr_val[1], arr_unit[1]);
+  const distanceCal = distanceConverter(arr_val[2], arr_unit[2]);
+
+  const G = 6.67 * Math.pow(10, -11);
+
+  const force = (G * m1 * m2) / (distanceCal * distanceCal);
+
+  return Math.round(force * 1e9) / 1e9;
+}
+
+function conversionConverter(mass, unit) {
+  const result =
+    unit === "kg"
+      ? mass
+      : unit === "g"
+      ? mass / 1000
+      : unit === "mg"
+      ? mass / Math.pow(10, 6)
+      : unit === "μg"
+      ? mass / Math.pow(10, 9)
+      : unit === "lb"
+      ? mass * 0.453592
+      : mass;
+
+  return result;
+}
+
+function distanceConverter(distance, unit) {
+  const result =
+    unit === "cm"
+      ? distance / 100
+      : unit === "mm"
+      ? distance / 1000
+      : unit === "μm"
+      ? distance / Math.pow(10, 6)
+      : unit === "ft"
+      ? distance * 0.3048
+      : unit === "m"
+      ? distance
+      : distance;
+
+  return result;
+}
+solution([1000, 1000, 100], ["g", "kg", "m"]);
+solution([1000, 1000, 100], ["kg", "kg", "m"]);
+solution([1000, 1000, 100], ["kg", "kg", "cm"]);
