@@ -2227,6 +2227,7 @@ return value must be Newton for force (obviously)
 μ copy this from here to use it in your solution
 
 */
+/*
 function solution(arr_val, arr_unit) {
   // Convert masses and distance to SI units
   const m1 = conversionConverter(arr_val[0], arr_unit[0]);
@@ -2276,3 +2277,20 @@ function distanceConverter(distance, unit) {
 solution([1000, 1000, 100], ["g", "kg", "m"]);
 solution([1000, 1000, 100], ["kg", "kg", "m"]);
 solution([1000, 1000, 100], ["kg", "kg", "cm"]);
+*/
+
+// class Ship {
+//   constructor(draft, crew) {
+//     this.draft = draft;
+//     this.crew = crew;
+//   }
+
+//   //YOUR CODE HERE...
+//   isWorthIt() {
+//     const draftAway = this.draft - 1.5 * this.crew;
+
+//     return draftAway > 20;
+//   }
+// }
+// const newShip = new Ship(30, 20);
+// console.log(newShip.isWorthIt());
