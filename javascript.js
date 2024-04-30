@@ -2369,6 +2369,42 @@ The values will always be numbers, and the properties will always exist.
 
 
 */
-function sortList(sortBy, list) {
-  return; //sorted list
+// function sortList(sortBy, list) {
+//   // const data = toString(sortBy);
+//   const data = sortBy;
+//   data.sort((obj1, obj2) => obj1[list] - obj2[list]);
+// }
+
+// sortList([
+//   { a: 1, b: 3 },
+//   { a: 3, b: 2 },
+//   { a: 2, b: 40 },
+//   { a: 4, b: 12 },
+// ]);
+/*
+Numbers to Objects
+
+Instructions
+Output
+You will be given an array of numbers.
+
+For each number in the array you will need to create an object.
+
+The object key will be the number, as a string. The value will be the corresponding character code, as a string.
+
+Return an array of the resulting objects.
+
+All inputs will be arrays of numbers. All character codes are valid lower case letters. The input array will not be empty.
+*/
+function numObj(s) {
+  let result = [];
+
+  for (let num of s) {
+    let obj = {};
+    obj[num.toString()] = String.fromCharCode(num);
+    result.push(obj);
+    console.log(result);
+  }
 }
+
+numObj([118, 117, 120, 130]);
