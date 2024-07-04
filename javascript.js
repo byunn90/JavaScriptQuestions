@@ -2466,5 +2466,65 @@ return value must be Newton for force (obviously)
 
 // Examples
 // sortDrinkByPrice(drinks) ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
+// Done
+// drinks = [
+//   { name: "lemonade", price: 50 },
+//   { name: "lime", price: 10 },
+// ];
+// // console.log(drinks[1]);
 
-function sortDrinkByPrice(drinks) {}
+// function sortDrinkByPrice(drinks) {
+//   return drinks.sort((a, b) => a.price - b.price);
+// }
+// console.log(sortDrinkByPrice(drinks));
+/*
+Printer Levels
+Given an object of how many more pages each ink color can print, output the maximum number of pages the printer can print before any of the colors run out.
+
+Examples
+Notes
+A single printed page requires each color once, so printing is not possible if any of the slots lack ink (see example #3).
+*/
+/*
+const inkLevelsOne = {
+  cyan: 23,
+  magenta: 12,
+  yellow: 10,
+};
+// ➞ 10
+const inkLevelsTwo = {
+  cyan: 432,
+  magenta: 543,
+  yellow: 777,
+};
+// ➞ 432
+const inkLevelsThree = {
+  cyan: 700,
+  magenta: 700,
+  yellow: 0,
+};
+
+// ➞ 0
+// console.log(inkLevels[]);
+function inkLevels(inks) {
+  const checkMin = Math.min(inks.cyan, inks.magenta, inks.yellow);
+  return console.log(checkMin);
+}
+inkLevels(inkLevelsOne);
+inkLevels(inkLevelsTwo);
+inkLevels(inkLevelsThree);
+*/
+
+/*
+Burglary Series (04): Add its Name
+Given three arguments ⁠— an object obj of the stolen items, the pet's name and a value ⁠— return an object with that name and value in it (as key-value pairs).
+
+Examples
+addName({}, "Brutus", 300) ➞ { Brutus: 300 }
+
+addName({ piano: 500 }, "Brutus", 400) ➞ { piano: 500, Brutus: 400 }
+
+addName({ piano: 500, stereo: 300 }, "Caligula", 440) ➞ { piano: 500, stereo: 300, Caligula: 440 }
+*/
+// Question 3
+function addName(obj, name, value) {}
