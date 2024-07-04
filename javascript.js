@@ -2527,4 +2527,10 @@ addName({ piano: 500 }, "Brutus", 400) ➞ { piano: 500, Brutus: 400 }
 addName({ piano: 500, stereo: 300 }, "Caligula", 440) ➞ { piano: 500, stereo: 300, Caligula: 440 }
 */
 // Question 3
-function addName(obj, name, value) {}
+
+const object2 = {};
+function addName(obj, name, value) {
+  obj[name] = value;
+  return obj;
+}
+console.log(addName({ piano: 500, stereo: 300 }, "Caligula", 400));
